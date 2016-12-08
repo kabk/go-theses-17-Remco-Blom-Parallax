@@ -12,34 +12,14 @@ h3 {
 	font-size: 200px;
 }
 
-.guides {
 
-	width:100%;
-	height:100%;
-	padding-left:10%;
-	padding-top:10%;
-	padding-right:10%; 
-	padding-bottom:10%;
+.divje {
+	position:float;
+	margin-top:5%;
 }
 
-.container {
-
-	width:100%;
-	height:100%;
-	padding-left:10%;
-	padding-top:10%;
-	padding-right:10%; 
-	padding-bottom:10%;
-
-}
-
-.row {
-	
-	width:100%;
-	height:100%;
-	padding-left:10%;
-	padding-top:10%;
-	padding-right:10%; 
-	padding-bottom:10%;
-	
+.divjez2 {
+	position:float;
+	padding-left:50%;
+	margin-left: 50%;
 }
