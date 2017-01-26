@@ -1,59 +1,1422 @@
-<!DOCTYPE html>
-            <html>
-                <head>
-                    <meta charset="utf-8">
-                    <title>Remco Blom &mdash; Thesis Parallax</title>
-                    <meta name="description" content="Parallax test code" />
-                    <meta property="og:title" content="Parallax test code" />
-                    <meta property="og:image" content="http://static.nrc.nl/images/w640/1106mediajanmulder.jpg" />
-                    <meta property="dc:creator" content="Remco Blom" />
-                    <!--<meta property="twitter:site" content="@nrc">-->
-                    <link rel="stylesheet" type="text/css" href="style.css"> 
-                </head>
+<html>
 
-                <script>
-                </script>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width">
+	    <meta name="description" content="Remco Blom &mdash; Parallax"/>
+	    <meta property="og:title" content="Remco Blom &mdash; Parallax"/>
+	    <meta property="dc:creator" content="Remco Blom" />
+	    <title>Remco Blom &mdash; Parallax</title>
 
-                <body>
+		<style>
 
-                    <div class="menu-ring">  
-                        <div id="item1">  
-                        <a href="#"><h1>Home</h1></a>  
-                        </div>  
-                        <div id="item2">  
-                        <a href="#"><h1>Chapter </h1><h2>1</h2></a>  
-                        </div>  
-                        <div id="item3">  
-                        <a href="#"><h1>Chapter</h1><h2>2</h2></a>  
-                        </div>  
-                        <div id="item4">  
-                        <a href="#"><h1>Chapter</h1><h2>3</h2></a>  
-                        </div>  
-                        <div id="item5">  
-                        <a href="#"><h1>Chapter</h1><h2>4</h2></a>  
-                        </div>  
-                        <div id="item6">  
-                        <a href="#"><h1>Chapter</h1><h2>5</h2></a>  
-                        </div>  
-                        <div id="item7">  
-                        <a href="#"><h1>Chapter</h1><br><br><h2>6</h2></a>  
-                        </div>  
- 
-                    </div> 
+/*			Dit is gewoon de css voor je website*/
+			#online{
+				display:block;
+			}
+
+			#print{
+				display:none;
+			}
+
+			/*.......................................................*/
+
+			body {
+			  margin: 0;
+			  padding: 0;
+			  border: none;
+			  background-size: cover;
+			 }
+
+			.start {
+		      position: absolute;
+		      width: 100%;
+		      height: 100%;
+		      background-size: cover;
+		      background-color: black;
+		    }
+
+		     .title {
+			  text-align: center;
+			  position: absolute;
+			  left: 50%;
+			  top: 50%;
+			  transform: translate(-50%, -50%);
+  			}
+
+		    .content {
+		      position: absolute;
+		      top: 100%;
+		      padding-left: 20%;
+		      padding-right: 20%;
+		      padding-top: 5%;
+		      padding-bottom: 5%;
+		      height: auto;
+		      background: white;
+		      text-align: justify;
+   			  text-justify: inter-word;	
+		    }
+
+		    .Chapter1{
+		      position: relative;
+		      padding-top: 1%;
+		      padding-bottom: 1%;
+		      padding-left: 0%;
+		      padding-right: 0%;
+		      height: auto;
+		    }
+
+		    /*------------------------------------------Span------------------------------------------*/
+
+			  img{
+			    display: none;
+			    position:relative;
+			}
+
+			img2{
+			    display: hidden;
+			    position:relative;
+			}
+
+			span:hover + img{
+			    display: block;
+			    position:absolute;
+			    box-shadow: 10px 10px 5px grey;
+			    max-width: 800px;
+			    margin: 1%;
+			    padding: 1%;
+			    background-color: white;
+			    background:white;
+			    /*-webkit-transform: rotateZ(-30deg);
+			        -ms-transform: rotateZ(-30deg);
+			        transform: rotateZ(-30deg);
+			        border-radius:50%;*/
+			}
+
+			span:hover + img{
+			    display: block;
+			    position:absolute;
+			    max-width: 800px;
+			    margin: 1%;
+			    padding: 1%;
+			    background-color: white;
+			    background:white;
+			    /*-webkit-transform: rotateZ(-30deg);
+			        -ms-transform: rotateZ(-30deg);
+			        transform: rotateZ(-30deg);
+			        border-radius:50%;*/
+			}
 
 
-                    <div class = "divje">
-                        <center>
-                        <h1>Parallax</h1>
-                    </div>
-                    
-                         		<div style = "divjez2">
-                                    <center>
-                         			<img src="http://static.nrc.nl/images/w640/1106mediajanmulder.jpg" alt="some_text">
-                                </center>
-                         	</div>
-                     	</div>
-                 	</div>
+		    .column {
+			  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+			  -moz-column-count: 3; /* Firefox */
+			  column-count: 3;
+			}
 
-                </body>
-            </html>
+		    .tab { 
+			  margin-left: 5%; 
+			}
+
+				@font-face {
+					font-family: Chronicle;
+				    src: url(Fonts/Chronicle/ChronicleDisp-Roman_0.otf);
+				}
+
+				@font-face {
+				    font-family: graphik;
+				    src: url(Fonts/graphik/Graphik-Regular.otf);
+				}
+
+				@font-face {
+				    font-family: graphikbold;
+				    src: url(Fonts/graphik/Graphik-Bold.otf);
+				}
+
+					    h1 {
+					    /*title head*/
+					    font-size: 70px;
+					    font-family: Chronicle;
+					    letter-spacing: 0.5px;
+					    line-height: 100%;
+					    font-weight: normal;
+					    letter-spacing: 1.3px;
+					    background: -webkit-radial-gradient(white, white, white, blue,
+					    	blue, white);
+					    -webkit-background-clip: text;
+					    -webkit-text-fill-color: transparent;
+					    /*extra shizzle part*/
+					    -webkit-transform: skew(63deg,-26.6deg);
+					    -moz-transform: skew(63deg,-26.6deg);
+					    -o-transform: skew(63deg,-26.6deg);
+					    -ms-transform: skew(63deg,-26.6deg);
+					    transform: skew(63deg,-26.6deg);
+					  	}
+
+					  	h2 {
+					    /*subquestion*/
+					    font-size: 25px;
+					    font-family: Chronicle;
+					    letter-spacing: 1.3px;
+					    background: -webkit-radial-gradient(black, black, black, blue, blue);
+					    -webkit-background-clip: text;
+					    -webkit-text-fill-color: transparent;
+					  	}
+
+					  	h3 {
+					    /*Chapter title*/
+					    font-size: 50px;
+					    font-family: Chronicle;
+					    font-weight: normal;
+					    color:black;
+					    background: -webkit-radial-gradient(black, black, black, blue, blue);
+					    -webkit-background-clip: text;
+					    -webkit-text-fill-color: transparent;
+					  }
+
+					    p {
+					    /*Plain text*/
+					    font-size: 19px;
+					    font-family: Chronicle, times;
+					    letter-spacing: 0.3px;
+					    line-height: 116%;
+					    background: -webkit-radial-gradient(black, black, black, blue, blue);
+					    -webkit-background-clip: text;
+					    -webkit-text-fill-color: transparent;
+					  	}
+
+					  	p1 {
+					    /*Plain text*/
+					    font-size: 19px;
+					    font-family: Chronicle, times;
+					       text-shadow: 0 1px 0 white,
+			               0 2px 0 black,
+			               0 3px 0 black,
+			               0 4px 0 black,
+			               0 5px 0 black,
+			               0 6px 1px black;
+					  	}
+
+					  	p2 {
+					    /*Plain text*/
+					    font-size: 19px;
+					    font-family: Chronicle, times;
+					    background: -webkit-radial-gradient(white, white, white, blue, blue);
+					    -webkit-background-clip: text;
+					    -webkit-text-fill-color: transparent;
+						}
+
+					  	hr{
+					  	}
+
+					  	.container {
+					    position: relative;
+						}
+
+						.topright {
+					    position: absolute;
+					    z-index: 1;
+					    top: 15px;
+					    right: 16px;
+					    font-size: 18px;
+					}
+
+					a:link {
+					    text-decoration: none;
+					}
+
+					a:visited {
+					    text-decoration: none;
+					}
+
+					a:hover {
+
+					    color:red;
+					}
+
+
+
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+
+
+			/*			Dit is de css voor het print gedeelte*/
+			/*			Als er geprint wordt, zet de 'online' div op display: none;, en maak de 'print' div zichtbaar*/
+
+			/*.......................................................*/
+			@media print { 
+
+				#online{
+					display:none;
+				}
+
+				#print{
+					display:block;
+				}
+
+			body {
+			  margin: 0;
+			  padding: 0;
+			  border: none;
+			  background-size: cover;
+			 }
+
+			.start {
+		      position: relative;
+		      width: 100%;
+		      height: 100%;
+		      background-size: cover;
+		      background-color: black;
+		    }
+
+		     .title {
+			  text-align: center;
+			  position: absolute;
+			  left: 50%;
+			  top: 50%;
+			  transform: translate(-50%, -50%);
+  			}
+
+		    .content {
+		      position: absolute;
+		      top: 100%;
+		      padding-left: 20%;
+		      padding-right: 20%;
+		      padding-top: 5%;
+		      padding-bottom: 5%;
+		      height: auto;
+		      background: white;
+		      text-align: justify;
+   			  text-justify: inter-word;	
+		    }
+
+		    .Chapter1{
+		      position: relative;
+		      padding-top: 1%;
+		      padding-bottom: 1%;
+		      padding-left: 0%;
+		      padding-right: 0%;
+		      height: auto;
+		    }
+
+		    /*------------------------------------------Span------------------------------------------*/
+
+			  img{
+			    display: none;
+			    position:relative;
+			}
+
+			img2{
+			    display: hidden;
+			    position:relative;
+			}
+
+			span:hover + img{
+			    display: block;
+			    position:absolute;
+			    box-shadow: 10px 10px 5px grey;
+			    max-width: 800px;
+			    margin: 1%;
+			    padding: 1%;
+			    background-color: white;
+			    background:white;
+			    /*-webkit-transform: rotateZ(-30deg);
+			        -ms-transform: rotateZ(-30deg);
+			        transform: rotateZ(-30deg);
+			        border-radius:50%;*/
+			}
+
+			span:hover + img{
+			    display: block;
+			    position:absolute;
+			    max-width: 800px;
+			    margin: 1%;
+			    padding: 1%;
+			    background-color: white;
+			    background:white;
+			    /*-webkit-transform: rotateZ(-30deg);
+			        -ms-transform: rotateZ(-30deg);
+			        transform: rotateZ(-30deg);
+			        border-radius:50%;*/
+			}
+
+
+		    .column {
+			  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+			  -moz-column-count: 3; /* Firefox */
+			  column-count: 3;
+			}
+
+		    .tab { 
+			  margin-left: 5%; 
+			}
+
+				@font-face {
+					font-family: Chronicle;
+				    src: url(Fonts/Chronicle/ChronicleDisp-Roman_0.otf);
+				}
+
+				@font-face {
+				    font-family: graphik;
+				    src: url(Fonts/graphik/Graphik-Regular.otf);
+				}
+
+				@font-face {
+				    font-family: graphikbold;
+				    src: url(Fonts/graphik/Graphik-Bold.otf);
+				}
+
+					    h1 {
+					    /*title head*/
+					    font-size: 70px;
+					    font-family: Chronicle;
+					    letter-spacing: 0.5px;
+					    line-height: 100%;
+					    font-weight: normal;
+					    letter-spacing: 1.3px;
+					    background: -webkit-radial-gradient(white, white, white, grey,
+					    	grey, white);
+					    -webkit-background-clip: text;
+					    -webkit-text-fill-color: transparent;
+					    /*extra shizzle part*/
+					    -webkit-transform: skew(63deg,-26.6deg);
+					    -moz-transform: skew(63deg,-26.6deg);
+					    -o-transform: skew(63deg,-26.6deg);
+					    -ms-transform: skew(63deg,-26.6deg);
+					    transform: skew(63deg,-26.6deg);
+					  	}
+
+					  	h3 {
+					    /*subquestion*/
+					    font-size: 25px;
+					    font-family: Chronicle;
+					    letter-spacing: 1.3px;
+					  	}
+
+					    p {
+					    /*Plain text*/
+					    font-size: 19px;
+					    font-family: Chronicle, times;
+						}
+
+					  	p1 {
+					    /*Plain text*/
+					    font-size: 19px;
+					    font-family: Chronicle, times;
+					    }
+
+					  	hr {
+					  		page-break-before: always;
+					  	}
+
+					  	@page {
+						    margin-top: 2cm;
+						    margin-bottom: 2cm;
+						}
+
+						@page :left {
+						    margin-left: 35cm;
+						    margin-right: 2cm;
+						}
+
+						@page :right {
+						    margin-left: 0cm;
+						    margin-right: 0cm;
+						}
+
+						
+
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+
+			}
+
+		</style>
+	</head>
+
+
+<body>
+
+	<div id="online">
+		<!-- In deze div codeer je gewoon je hele website -->
+
+			<!--.......................................................-->
+
+
+
+<div class="container">
+  <div class="topright">
+    <p2>
+      <a href="#— Introduction"><p2><i>— Chapter 1</p2><br></i></a>
+    <a href="#— Chapter 1"><p2><i>— Chapter 1</p2><br></i></a>
+    <a href="#— Chapter 2"><p2><i>— Chapter 2<br></p2></i></a>
+    <a href="#— Chapter 3"><p2><i>— Chapter 3<br></p2></i></a>
+    <a href="#— Chapter 4"><p2><i>— Chapter 4<br></p2></i></a>
+    <a href="#— Chapter 5"><p2><i>— Chapter 5<br></p2></i></a>
+    <a href="#— Chapter 6"><p2><i>— Chapter 6<br></p2></i></a>
+    <a href="#— Conclusion"><p2><i>— Conclusion<br></p2></i></a>
+    <a href="#— Acknowledgments"><p2><i>— Acknowledgements<br></p2></i></a>
+
+</p2>
+
+</div>
+</div>
+
+
+
+<div class='start'>
+	<div class="title">
+		<h1><i>— How could virtual reality 
+                change typography? —</i></h1>
+    </div>
+</div>
+
+<div class='content'>
+
+<!-------------------------- Introduction ------------------------>
+
+	<div class="introduction">
+        <A NAME="— Introduction">
+       <p><b>— Introduction —</b><br>
+        
+<i>Graphic design</i> is the practice of connecting people with information, solving visual problems through academic and visual research by critical thought. A designer may employ myriad skills and techniques, while incorporating a collected body of knowledge both design and life related. A designer should not separate the two, they are inseparable. The 20th century definition of a graphic designer no longer applies. A graphic designer today can no longer hide behind the mask of traditional design. He has to adapt his profession, skills and mentality to the potential needs of society within a larger context. A graphic designer is someone who needs to think strategically, critically and beyond established habits. Providing an interdisciplinary perspective influences the design practice. The graphic designer is an agent of change in a rapidly developing practice.
+<br><br>
+<i>Typography</i> is simply understood as the art and technique of arranging letters. The legibility of information is central to the work and skills of a designer to communicate information. Technological advancement was the cause of a more rapid information exchange. During the digitalization of the profession, typography and graphic design made a demanding shift from an analogue to a digitalized form. The digitalization of typography created possibilities for interactive communication. Motion and speed became an important factor in the typographic practice. Migrating analogue typography to the digital created a new perspective. The migration questioned the presence of letters in the new digital media. The acknowledgement within the typographic practice to change direction in order to fit typography into multiple media sizes demanded a change in designing typefaces. However, digital typography remained mostly a two-dimensional representation of information on a screen. Futuristic advancement, such as virtual reality glasses, carefully suggests that digital typography could shift from a two-dimensional to a three-dimensional perspective.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Today, the rapid development of various three-dimensional software makes it easier for designers to work within a three-dimensional atmosphere. A three-dimensional representation of information could have a huge impact on the role of typography and communication in the design practice. Successful alteration of typography in order to answer to a three-dimensional environment could potentially be found within the acquisition of a different perspective. The layeblue perspective of a “parallax” plays with different motions and distances of information. The usage of typography as a gateway in virtual reality drew my attention. It brought me to the question;</p>
+
+<h2><i>“How could virtual reality
+change typography?”</i></h2> 
+
+<p>In order to be able to answer this question, we first have to understand the question itself. Within the thesis I address the potential migration of typography to a three-dimensional atmosphere while additionally touching upon social, conceptual and philosophical considerations.</p>
+
+	<p class="tab">
+	<b><i>&mdash;In the first chapter</i></b> I elaborate on the current state of virtual reality. I discuss the implementation of virtual reality in the design practice. Why and how is this implementation needed? Seeing in different perspectives, a parallax, is clarified. 
+	<br><br>
+	<b><i>&mdash;In the second chapter</i></b> I focus on practical knowledge, potential problems and the adaptability
+	of typography. I address the ways in which typography could change within a three-
+	dimensional environment.
+	<br><br>
+	<b><i>&mdash; In the third chapter</i></b> I focus on earlier attempts to create typography in a three-dimensional way. I address the recent usage of three-dimensional effects and information landscapes. Futuristic perspectives in graphic and type design are discussed as well as expectations, changing landscapes and narratives. I will be touching upon social impact, semiotics, language systems and decoration.
+	<br><br>
+	<b><i>&mdash;In the fourth chapter</i></b> I talk about philosophical considerations on the ways in which virtual reality blends with reality. Hyper reality, resistance,gamification and the reinvention of the environment as themed entertainment are topics that are tackled. I will give special attention to the potential dangers, limitations and possibilities of this unclear boundary between reality and virtual reality.
+	<br><br>
+	<b><i>&mdash;In the fifth chapter</i></b> I give a presumption of a solution to the question, I will explain the relevance of the gestalt theory for designers and will discuss its potential application. By addressing practical knowledge of layeblue information, the emerging problems of typography in a three-
+	dimensional atmosphere can be discussed. 
+	<br><br>
+	<b><i>&mdash;In the sixth chapter</i></b> I provide the reader with a recap of the thesis and will briefly discuss topics that are beyond the scope of this research but are worth further discussion and research. 
+	<br><br>
+	<b><i>&mdash;Finally, I conclude</i></b> with my answer to the question and explain how designers could manage typography in virtual reality.</p>
+</div>
+<br><br><br>
+<hr>
+
+<!-------------------------- Chapter 1 ------------------------>
+
+<div class="Chapter1">
+	<A NAME="— Chapter 1">
+        <h3><i>Chapter 1</h3></i>
+	       	<p><b>— Virtual reality? —</b><br>
+         
+            The first references to the concept of a digital three-dimensional space came from science fiction around 1950. The term <i>“virtual reality”</i> refers to technology that replicates a real environment while actually providing the user with a simulation of a physical presence within a three-dimensional environment. The interactive experiences stimulate the human senses. Virtual reality introduces the user to a digital world by replacing the stimuli of reality with digital content. The beauty and power of virtual reality is that a designer can create all kinds of worlds with typography, images and sound. 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The experience of virtual reality could be compablue with the experience of a dream. Hypnotized by this experience, people rapidly become more willing to be manipulated. Just like in the early 2000s when we could not yet fully fathom the political, economic and societal implications of the invention of the mobile phone, we can only speculate what virtual reality could bring us in the near future. Users thought that the mobile device could grant them an amazing technological advancement in communication. The millions of mobile apps that were created enabled the user to communicate in a more individual, impersonal and abstract way. Digital media became a wave of endless possibilities. In the last ten or fifteen years the computer seems to have slowly been replaced by the smartphone. The possibilities of technological advancement seem endless. Introducing or popularizing virtual reality within society could trigger a new wave of interactive and social possibilities. However, we have to question the influence of technology on our social behaviour. Did we become lazy, isolated beings who are too dependent on technological advancement? Rapid communication enables us to connect in an impersonal way. People are bound to their devices. Is there a way to activate our current society and stimulate social behaviour? The usage of typography within a three-dimensional environment and the usage of three-dimensional design in a meaningful way could play a key role in developing a new form of social behaviour. How can we, as designers and participators, stimulate our current society? Virtual reality could be an answer with typography as binding element.<br><br>
+
+<b>— The current state of virtual reality —</b><br>
+It is exciting to see the development of virtual reality today. It might lead to important changes in human life and activity. Virtual reality already attempts to integrate into our daily life and activities, currently sold to the masses through virtual reality “experiences”. Clear and well-known examples are Google glasses and VR glasses. Both are head-mounted, portable computers shaped as a pair of eyeglasses that display information in a smartphone like hands-free format <i>(See image  
+  <p1><span>1</span>
+    <img src="Images/82c117b483c0eab8c0f0ee0023ae0408.jpg"/>
+ and
+  <span>2</span> 
+    <img src="Images/481ff1080ca0e8427ed7573113e3d563.jpg"/></p1>
+)</i></i>.
+            Virtual reality is on the rise and it challenges the public and the graphic designer. Still, the three-dimensional visual and virtual world still leaves a lot to be desired. Information exchange, typography and the usage of communication systems have the potential to become a work field for the graphic designer. Within virtual reality, visual contact is made through the connection of various elements. With the presence of typography, images, movement, sound, three-dimensionality, and interactivity in real time, a lot is happening in the virtual environment. Virtual reality requires a blend of multiple professions; the borders of graphic design fade. Virtual reality extends the boundaries of the graphic design profession. The graphic designer becomes a sculptor of an environment by combining all senses. The application of typography in virtual reality generates a discourse: even though it has been examined, we do not know a lot about it. However, typography is an important aspect of virtual reality since it could provide the user interactive direction and navigation. The readability of information becomes a key factor in spatial information. The question is how the third dimension can be used within typographic and graphic design. Virtual reality extends the integration of the senses in these cinematic virtual places. How can the designer make people become comfortable with spatial information and solve emerging visual problems? Typography could become an interactive tool, an element to navigate and connect.
+<br><br>
+  <b>The parallax</b><br>
+Within a three-dimensional world, the displacement or difference in the apparent position of an object is called a <i>“parallax”</i>. A parallax is seeing objects in different perspectives from different points of view <i>(see image 
+<p1>
+<span>3</span>
+  <img src="Images/2000px-Parallax_Example.svg.png"/>
+</p1>
+)</i>.
+         To explain: typography can be viewed along different lines of sight in a three-dimensional world. This contradicts our current two-dimensional viewpoint. We see the letters only from the front. The position of typography within a three-dimensional world can be measured by the angle or semi-angle of inclination between two lines. Due to foreshortening, nearby “objects” have a larger impact than more distant objects when observed from different positions. For example, when one drives a car, the foreground of the environment appears to move faster than the background. The dynamics of a parallax can be used to determine distances between objects or layers. Migrating current typography to virtual spaces is problematic since, when doing this, the legibility in the third dimension becomes complex. The viewers are used to a two-dimensional viewpoint. Words far away or behind the user in a space cannot be read and words too close cannot be seen as information, they become a shape. Information could become a clutter of layers or even invisible when viewed from different angles. By navigating through a three-dimensional landscape, fixed letters could for example rotate 90 degrees so that they become invisible, or 180 degrees so that they become unreadable. The three-dimensional impact of virtual reality on typography has to be investigated.</p>
+         <br><br>
+
+</div>
+<hr>
+
+<!-------------------------- Chapter 2 ------------------------>
+
+<div class="Chapter2">
+	<A NAME="— Chapter 2">
+        <h3><i>Chapter 2</h3></i>
+        
+	    <p><b>— Typography —</b><br>
+        The shift to digital media changed what we could do with analogue type design. The alteration of typography addressed a very basic problem: <i>font interpolation</i>, which means that a fonts design is modified in such a way that it is usable in multiple media sizes. Media such as print or a computer screen have their practical limits. The translation of the style of a font represents the same challenge to inherent breakpoints: by scaling typography set in a certain font, the legibility is compromised. Scaling scentences from a 50 cm by 100 cm print to a 13-inch computer screen negatively influences the readability. Directly translating the print itself to fit the screen makes the words unreadable. The print has to be “scaled down” to ensure the correct appearance of the sentences. To make the words readable on the screen the information has to be altered and transformed. The medium break sentences and words so that they fit the medium and become readable. Within the typographic practice, this problem can be solved to a certain extent in a 2D spectrum <i>(see image 
+        <p1>
+        <span>4</span>
+          <img src="Images/5794.png"/>
+        </p1>
+        )</i>.
+         However, in a virtual reality atmosphere, 3D typography pushes the boundaries of traditional design <i>(see image 
+        <p1>
+        <span>5</span>
+          <img src="Images/abbott_dimenp.jpg"/>
+        </p1>
+        )</i>.
+         A font could become layered, adaptive, linked and context-aware based on the medium it emerges in. Virtual reality could otherwise turn into a maze of three-dimensional layer clutter <i>(see image 
+        <p1>
+        <span>6</span>
+          <img src="Images/Yoon_RISD_Courtesy-of-The-RISD-Museum-650x433.jpg"/>
+        </p1>
+        )</i>.
+          Font interpolation — the modification of the design of a letter to fit multiple media sizes — can create truly responsive typography. Traditional font interpolation used to be a process. From a “master font” new intermediary fonts were created. The “Univers” typeface <i>(see image 
+        <p1>
+        <span>7</span>
+          <img src="Images/univers 21 weights.jpg"/>
+        </p1>
+        )</i>, was designed by the Swiss typographer Adrian Frutiger in 1954. He designed twenty-one versions of Univers, all in five weights and five widths. Whereas some type families changed over time, Univers was visualized as a fixed system of different fonts that originate from the “master font”. Master fonts represent key prototypical designs across different recognizable points in a font family. To adjust typography and ensure that it fits multiple media sizes, math was introduced. Parametric and coded rules can generate various “children” of the original master font” <i>(see image 
+        <p1>
+        <span>8</span>
+          <img src="Images/NoordzijCube.gif"/>
+        </p1>
+        )</i>.
+         Instead of designing fonts manually, type designers were now able to derive additional font variants/weights from interpolation. By applying this concept to 3D typography, the same problem rises. <i>(see image 
+        <p1>
+        <span>9</span>
+          <img src="Images/2000px-Parallax_Example.svg.png"/>
+        </p1>
+        )</i>. Different font variants require different spacing, however within this extra dimension different rules apply. When two-dimensional, interpolated, type designs have been created they are being exported mostly as separate font weights and alterations: Extra Thin, Thin, Semi Thin, Extra Light, Light, Semi Light, Plain, Regular, Semi Bold, Bold, Extra Bold, Semi Black, Black, Extra Black, Extended. I do not argue that 3D typography does not have the same amount of possibilities, however, two-dimensional typography is based on established optical rules. The implementation of an extra z-axis – depth – in a typeface changes the known interpolation and spacing. The typographic experience is expanded by the increasing range of context and direction related positions that are available to the viewer <i>(see image 
+        <p1>
+        <span>9</span>
+          <img src="Images/tumblr_nk7b7pNWtp1qcdhido1_1280.jpg"/>
+        </p1>
+        )</i>.
+         Different representations of the letters are shown from different perspectives. The apparent change in the relative position of two points due to a change in the position of the observer is also called a “parallax”. This is where the brain perceives depth based on the difference in the position of the shapes <i>(see image 
+        <p1>
+        <span>10</span>
+          <img src="Images/parallax-scrolling-effect.jpg"/>
+        </p1>
+        )</i>. The readability of information becomes a key issue within spatial information. Interpolation can alter more than just font weight as it could cause the fundamental structure of a font to change <i>(see image 
+        <p1>
+        <span>11</span>
+          <img src="Images/3d-path-preview.jpg"/>
+        </p1>
+        )</i>. Virtual typography has, like digital typography, an infinite number of poles and axes linked to a combination of coded rules. The question is if there is value in an extra typographic dimension. How can the rules in the infinite dimension be determined? The ways in which information is exchanged and received is influenced by an illustrative effect more than by the communicative value. The extra dimension in a font could become a simulation that creates decoration. The way we digest information depends on the typographic application of shapes within the context. Typography becomes a subdivision of the environment and plays a vital role in the way information is perceived. Although current interpolated fonts provide flexibility in usage, the static letters are mostly bound by their 2D nature. Type is tied to its own appearance and the usability in a medium. 
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Interpolation influenced the way that type was designed and set in its time. An attempt was made to display a three-dimensional view by using typographic motion in film. However, this was still a 2D display of a 3D world. A layered environment attempts to solve this problem, although legibility is still an issue. 3D 
+        typography is in need of more significant adjustments. It can be placed in an ever-changing environment in which the user 
+        participates. Typography depends on the parallax, the motion, position and perspective of the viewer. Alteration, range and hierarchy in a three-dimensional perspective become inevitable. The role of the graphic designer becomes relevant as he plays with these. A new hierarchy in the exchange of information could be introduced. A traditional hierarchy, to display typography, as argued by Erik Blokland; “Book - page - layout - column - paragraph - line - word - letter - shape” could be re-considered within a virtual 3D environment. “Virtual reality - 360° environment - depth - layers - word - letter - shape - gateways”. Setting type on a line has a width that comes from the page, a word has a width that comes from its shapes, the hierarchy is broken when implementing typography in a virtual environment. Words with an infinite width become unreadable. Our eyes cannot separate type from shape anymore. All sentences and word “objects” have their own problems and requirements. As argued by type designer Gerrit Noordzij; “typography is writing with prefabricated letters.” Prefabricated in the sense of not knowing where they will be used. This is why common sizes were introduced. Applying prefabricated typography to a 3D environment might “damage” a fixed font as prefabricated shapes have limited adaptability. Legibility of typography in an infinite dimension becomes the main focus.</p>
+
+
+        <p class="tab">
+        <b>— Coding typography —</b><br>
+        The mathematical position of the parametric points of a typographic letter create a fixed structure. In order to be able to recognize the letter “P” as such, it needs predefined points. The points separate a “P” from an “A”. However, if the font data/appearance is not positioned as a fixed shape of points, undefined rules tempt to do their work by logic/math. If there are no rules defined in 2D and 3D, the typeface rescales in all points in all directions, out of bounds. Scaling or stretching a font in 3D to create interpolation, distances and type-appearances, could result in overlapping shapes. The code defined by the designer becomes a rule to limit the typography and its behaviour to ensure readability in a three-dimensional atmosphere. Traditional prefabrication is no longer useful, the font itself is able to adjust to the peculiarities of a third dimension. Of course you could argue that the construction of the font in such a way is also prefabrication. Prefabrication could be useful to 3D typography; geometric shapes have to deal with the relation towards each other. However, the floating type exists with infinite boundaries in virtual reality and is only limited by defined rules. When the extremes are defined they can be controlled. 
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Interpolation allows for precise size-specific adjustments 
+        in order to take into account the different distances at which a reader can perceive type. The “letters” in depth could be too far away to be readable. Far away distances of typography or captions in small sizes simply lose detail as the eye cannot distinguish typography from shape anymore. A font’s legibility and readability adjustments must be linked to accessible options. Accessible options can be points or signs to access information positioned on an x-y and z grid. A challenge is rendering interpolated type quickly and smoothly. Smooth transitions in a font lined up with the original shape can minimize the optical and visual change rather than rapid flashy size changes. The typography becomes a never ending movement. There is never one “standard” view. 
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Has typography lost its validity in a three-dimensional world? A 3D letter is not particularly necessary to communicate information in a three-dimensional atmosphere. The designer has to start to think in accessible layers, distances and motion. This is where a parallax comes in, a layered view of information accessible to the user at any time. Like browsing through a website, the exposure of layers becomes the main focus. A three-dimensional parallax could provide an overview of layers that provide a gateway to various virtual worlds.
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;High-contrast or low-contrast letters often require separately drawn poles between the extremes to help maintain the relationship between thick and thin within the letters. In some situations where rescaling takes place, elements of a letter are forced to get thin, for example the crossbar of the lowercase ‘e’.  By rescaling or moving it to different distances the thin bar could disappear in the background. Some type designs could get so extreme that the letter shape is forced to change, such as replacing a combined form <i>(as an example “oe”)</i> with a custom and single glyph <i>(“&oelig;”)</i> for various sizes. Typography will most likely change in virtual reality as different perspectives change how it is seen by a user. By adding a third dimension to the typographic practice, type-designers as well as graphic designers have to adjust their approach to design rather than to treat typography in a traditional way. The perception of multiple perspectives of typography requires a break with established rules. A designer has to look for useful three-dimensional usage of typography in various “landscapes” of media instead of importing a two-dimensional typeface to a three dimensional perspective <i>(see image 
+        <p1>
+        <span>10</span>
+          <img src="Images/parallax-scrolling-effect.jpg"/>
+        </p1>)</i>.</p>
+
+</div>
+<br><br><hr>
+
+<!-------------------------- Chapter 3 ------------------------>
+
+<div class="Chapter3">
+	<A NAME="— Chapter 3">
+        <h3><i>Chapter 3</h3></i>
+        <p><b>— Narrative systems —</b><br>
+
+Virtual reality is able to create a new narrative form. One that current technical and stylistic norms are unable to. The designer could introduce a new way of communicating information in a virtual environment through the use of image, symbols or even a new genre in typography itself. Providing great typographic experiences with the wide range of devices that exist nowadays is hard to do considering the current state of 3D typography. Users are served poor reading experiences that do not adapt to the environment in which the reading takes place. Currently no third dimension exists that could interact with the user. Screens are still a two-dimensional representation of a three-dimensional environment. This is also one of the central issues discussed in modern literary theory. To summarize: it is the opposition between a presumably passive reading of a text and an active, deconstructive reading that imaginatively participates in the text’s creation.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The relationship between information and decoration has always been at the centre of research on a graphic design and scientific level. Depending on appearance, information and decoration are close to an image. Structure, harmony, frequencies, appearance, composition and rhythm binds them. A typographic language possesses a system of signs communicating in space and time through several formats. The oddity of typography is its existence under several states and times. Written or performed, changing its own visibility as communication advanced <i>(see image 
+<p1>
+<span>13</span>
+  <img src="Images/alphabet.gif"/>
+</p1>
+)</i>. Typographers and graphic designers could consider to re-examine the current visual language as digital and virtual media continue to advance. Typography is bound to its two-dimensional established rules. Even though typography became virtually accessible, the shift to virtual reality never really changed typography. Like the digitalization of typography, letters became a copy of the original analogue presentation. Although possibilities emerged to create depth as an effect in a letter <p1>
+<span>12</span>
+  <img src="Images/letters-preview.jpg"/>
+</p1>
+)</i>, 3D typography remained a gimmick used for illustrative and commercial purposes. Looking at the history of typography itself, from ancient cave signs to our present type shapes <i>(see image 
+<p1>
+<span>13</span>
+  <img src="Images/alphabet.gif"/>
+</p1>
+)</i>, the transition of letter shapes occurred through technological advancement and speed. Throughout history, typographic shapes have changed. Today, the designer could re-examine typography by questioning the contemporary symbols and shapes within a three-dimensional world. Designers could look beyond text and images, introducing adaptive three-dimensional typography to suit each virtual world. By this I do not mean we should completely abandon our hard-fought and readily established typographic tradition. Introducing traditional typography and media to a three-dimensional world can be a first step. 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A linear narrative, such as reading a book or scrolling through the web, has evolved to break down the limitations posed by time and emotive viewpoint. A narrative placed in a virtual reality could apply the concept of immersion, engaging the perceiver to be focused on the information by concentrating on one course of instruction, subject, navigation symbol or project to exclude other stimuli. Interactivity can develop a new system of reading and thereby navigation. The trap is the spectacle; applied effects that look impressive but do not communicate the message. By applying predefined effects <i>(see image 
+<p1>
+<span>14</span>
+  <img src="Images/8ff2d_aug22_haarlem_img.jpg"/>
+</p1>
+)</i>, the medium becomes the massage instead of the message. The current state of three-dimensional typography in both analogue and digital media is a two-dimensional representation of a three-dimensional world. Bevel and embossing <i>(technique to create a 3D effect with type, see image 
+<p1>
+<span>14</span>
+  <img src="Images/8ff2d_aug22_haarlem_img.jpg"/>
+</p1>
+)</i>. a typeface simply gives a suggestion of 3D information. It has nothing to do with transitional information or a system to steer the viewer. 3D suggestions are simply an illustration of information, better known under the term “skeuomorphism”. Skeuomorphism is basically the design concept of imitating the appearance of a real-world counterpart. For example actually flipping through pages on an iPad screen. This is an action that imitates the actions related to reading a book in real life. The content on the screen becomes a representation of the old medium which is strange as the book is a completely different medium. It becomes irrelevant to use the digital medium, there is no advancement only imitation. Skeuomorphism is a misleading, decorative approach to the sense of a book. You can see skeuomorphism as a transitional phase between the old and the new. Although used in many design fields such as interface, web and interior design, flat design simply gets “ decorative contrast” attempting to create three-dimensional effects on a two-dimensional surface. The efficiency of three-dimensional typography in virtual reality will rely on the effectiveness of simple navigation to attract the attention of the viewer to the information.
+</p>
+
+		<p class="tab"><b>— Information landscapes —</b><br>
+		Muriel Cooper introduced the “information landscapes”. She was one of the first designers that applied responsive informational landscapes to 3D topological spaces <i>(see image 
+		<p1>
+		<span>15</span>
+		  <img src="Images/06.jpg"/>
+		</p1>
+		)</i>. What intrigued was that she revealed connections and information that could not be expressed in print. She introduced an alternative system to perceive information. Just like web-based information, hyperlinking became a responsive way to navigate through complex data of information. Within the project multiple layers helped establish a context and gave the viewer a sense of place in the new “space”. Our cognitive and perceptive systems had to work together. So what did we learn? These systems could become one. Graphic designers could connect them by blending information so that effects and illustration could become a coherent whole. The concept of establishing interactive layers of typography is key in defining the thesis question. The role of typography changes as it could be used as a layer or link, a gateway, if you will, to navigate through different three-dimensional worlds of information. Futuristic movies speculate about three-dimensional landscapes, think about Minority Report <i>(see image 
+		<p1>
+		<span>17</span>
+		  <img src="Images/MIS_Ch05-014.jpg"/>
+		</p1>
+		)</i>, Iron Man <i>(see image 
+		<p1>
+		<span>16</span>
+		  <img src="Images/iron_man_2_holographics.jpg"/>
+		</p1>
+		)</i> or Star Trek <i>(see image 
+		<p1>
+		<span>18</span>
+		  <img src="Images/Screen Shot 2017-01-06 at 21.06.09.png"/>
+		</p1>
+		)</i>. In these movies the user browses through information and, by constructing several virtual layers around him, is provided with an overview of content. Typography is used as a supportive layer of a virtual interface: providing an interactive experience by hyperlinking each word to a different atmosphere. Parallaxes appear, distances and motion groups typography to link information whereby customizable narratives develop. By going “in” the virtual layer, the user sculpts the world around him constantly expanding or removing typography and images. Although the virtual layers are futuristic presumptions, the examples show how typography could act as a layered tool.
+		</p>
+
+<p><b>— Language —</b><br>
+When it comes to content, form and vocabularies, the semiotics <i>(the study of signs and symbols and their use or interpretation)</i> and semantics <i>(logic)</i> could be revised within a three-dimensional world. Migrating information to a three-dimensional environment has to be done in a meaningful way. The translation of a dictionary requires a different approach from one that is required for the translation of a simple hand sign. For a dictionary, the connections have to be logical, alphabetical order has to be implemented. A simple hand sign could serve as a navigation tool; the symbol only needs recognition or interaction in order to know what to do. Providing significance of navigation through information becomes the task of the designer. By blending semiotics and semantics together the designer could blend an informative and decorative world of interactive tools. The representation of information could become a three-dimensional landscape of navigation through knowledge <i>(see image 
+<p1>
+<span>16</span>
+  <img src="Images/iron_man_2_holographics.jpg"/>
+</p1>
+)</i>. 
+  Using typography in 3D environments as 3D shapes has two contradictory points. Firstly, the use of three-dimensional typographic shapes could simply be seen as a decoration of information that renders the third dimension meaningless. Secondly, a 3D shape could provide an assumption of broadening knowledge triggering curiosity, adding value to transport to another world of information. Like Alice in wonderland following a white rabbit to find out what is there to be exposed <i>(see image 
+<p1>
+<span>19</span>
+  <img src="Images/alice-in-wonderland-classic-disney-24501729-430-314-1.gif"/>
+</p1>
+)</i>. The urge for two-dimensional simplicity is the equivalent of self-denial. Decoration could be compared to appreciation, understanding craft and emotion. Designers need to control their first sensations and expressiveness, as there is limited knowledge of typographic application in virtual environments. With the use of decoration in design professions, the designer has become more redefined. The general answer to decoration is that people feel like design should be functional. However, if you use decoration in an expressionistic manner, you could use it to actually say something, adding value. Ornaments can be good for development by bringing aesthetic value to information, but mostly, the connection between information and decoration is missing. Three-dimensional typography becomes a subjective matter; the perception of order, decoration and meaning could potentially blend. Virtual reality becomes our canvas, but for now we’re cramming it <i>(see image 
+<p1>
+<span>6</span>
+  <img src="Images/Yoon_RISD_Courtesy-of-The-RISD-Museum-650x433.jpg"/>
+</p1>
+)</i>. At this very moment, it seems like we are in a decorative period of applying typography in a three-dimensional atmosphere. With virtual reality software at hand, expressing ourselves has become easier than ever. Focusing on typographic implementation within a three-dimensional environment could lead to narratives that go beyond the imagination in our time. The designer has to keep in mind that each person understands and perceives a built environment differently. The difference in understanding three-dimensional content has to do with personal interpretation of text and images. The task is to communicate information the way it should be perceived. A designer has to take the lead and steer the viewer in the right direction in order to receive information in the clearest/most proper way. Simplifying information does not happen solely through the use of the technology of virtual reality itself; it is about using a parallax, a layered view to understand information in a simple and understandable way. By accessing typographic layers with gestures that people are familiar with today, such as scrolling or swiping through a webpage, designers can test and expand the virtual reality boundaries. The layers should be intuitive so people can instinctively use it the right way as a first step. 
+</p>
+
+
+</div>
+<br><br><hr>
+
+<!-------------------------- Chapter 4 ------------------------>
+
+<div class="Chapter4">
+	<A NAME="— Chapter 4">
+        <h3><i>Chapter 4</h3></i>
+        <p><b>— Hyper reality and philosophical considerations —</b><br>
+
+        Hyper reality, “the inability of consciousness to distinguish reality from a simulation of reality”, requires a watchful eye on future design practices. The notion of the audience shifts as it encounters the virtual world. Social, cultural, philosophical, materialistic and political contexts of the contemporary design field are in need of a critical, post-modern look in virtual reality. Hyper reality could become a dangerous aspect of virtual reality, especially in technologically advanced postmodern societies. Hyper reality is seen as a condition in which what is real and what is fiction blend so well together that there is no clear distinction between where one ends and the other begins. A clear example of this is the speculative movie of Keiichi Matsuda named “HYPER-REALITY” 
+        <i>(see video / frame 
+        <p1>
+        <span>15</span>
+          <img src="Screen Shot 2016-12-08 at 09.35.51 copy.png"/>
+        </p1>
+        )</i>.
+
+         With this project, Keiichi Matsuda allows the merging of physical reality with virtual reality. The reinvention of the environment as themed entertainment could be the pitfall of post-modern society. Pitfall as in a crammed space around the user; an overload of information that detaches him from reality. It is difficult to find something that does not revel in a certain degree of simulation. Within the project, social communication becomes blurred as the user is always busy with distractions. By showing an interactive game-based society, the person’s identity is bound to chievements/rewards. As the virtual layer falls apart by a “hack” of the person, the “identity” is lost. The society becomes dependent on virtual layers. Multiple parallaxes occur, motion, speed and various distances of layers attract the user to act. Like commercial pop-ups on web browsers, information appears and disappears. Virtual typography performs as a reproduction of its two-dimensional origin and tends to behave like graffiti attached to physical objects. The use of multiple parallaxes shows how typography could act as a virtual layer in reality. Typographic “symbols” or “surface covers” activate information and redirect the user to overlying layers, providing in-depth knowledge. The creator shows the world as a three-dimensional smart-phone, revealing and hiding layers of information. 
+         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Virtual reality changes the role of typography as the shapes become an entrance to a virtual and “hidden” world. Letters could act as a gateway to enter a simulated reality, a matrix <i>(see image 
+        <p1>
+        <span>20</span>
+          <img src="Images/15942047_1195553183870033_1871387949_n.jpg"/>
+        </p1>
+        )</i>. Typography becomes a rabbit hole, referring to Alice in wonderland, the deeper you tumble in, the more you find out how deep it actually is. By literally going “into” the typography, the letters become a keyhole to different worlds. Like the code from the Matrix movie, the letters lead the viewer to a different reality. Virtual reality changes typography to act not only as a representation of words and letters, but as a gateway, exposing hidden worlds of information. 
+        <br></p>
+	        <p class="tab">Game-based interactive learning shows that man learns best by doing or by being. A growing number of gamers find themselves, for different reasons, more involved with the hyper-real game world and less with the physical world. This “disconnection from reality” shows how virtual reality requires a different approach to typography. Gamification of typography could become a distraction to the actual information. By making reality a game, we play with our consciousness. By adapting our senses and placing a virtual layer in reality, “visual pollution” and “over-stimulation” could take place. By this I mean that it could lead to a certain desperation of endless visual options, blurring our vision. The distinction between information and decoration becomes blurred. Reality could become a visual dump. Spatial awareness could become very powerful, and very specific signifiers of common ideas. 
+	        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This world’s reality might change, considering how every typographic shape can be applied within a virtual layer. Virtual reality should however not lose the awareness of spatial perception. In the movie “HYPER REALITY”, navigation systems are taken to the next level by their ability to literally draw a road of where you have to go. By introducing virtual worlds into physical spaces, we can endlessly speculate about how our reality can be adapted or even enhanced in an ever-present overlay of layers. Virtual reality becomes subjective. Everybody has its own perception of what it could be. Additionally, the virtual layer could become a customizable landscape as a reflection of someone’s personal taste and interest. However, the designer imposes his projection of information on the public, whether the public is invited or not. Designers have to make sure virtual information does not exclude the user of the environment. Our environment could transform us into an egocentric isolated self <i>(See video / frame 15)</i>.
+	          <i>(see video / frame 
+	        <p1>
+	        <span>15</span>
+	          <img src="Images/Screen Shot 2016-12-08 at 09.35.51 copy.png"/>
+	        </p1>
+	        )</i>. 
+	          In a game-based world, we separate our mind from the body. Our body becomes a digital avatar, a figure representing a particular person in a computer game. Our mind is “in” the game, our physical body is “out”. Virtual reality attempts to do the same. By wearing virtual reality glasses we separate our body from our mind. We “deny” our body to take part in the virtual world while our mind fully participates. Rapid images are seen as truth, regardless of the background information. Just like television, we have a tendency to accept all that is shown. Truth and fiction blend as a new factual reality. The manipulation of movement and time is the essence. Without interactivity our tactility and body is lost. Stimulation of both the mind and the senses has to be integrated. If the designer does not integrate these, we become robots. Resistance becomes the keyword in this. Reality offers resistance. If we try to imagine a world without resistance, there seems to be only one factual realization of it: virtual reality. It provides a glimpse of a future perspective, with typography acting as a binding element between reality and virtual reality. Within technical advancement man has come to see not only the world but also himself as an accelerating movement, a development. If we maintain the contrast between body and mind, you can conclude that acceleration has taken over the mind via the body. And like communication of information to the masses, the distinction between truth and reality has become blurred. Because of the lack of resistance within a virtual world it becomes possible to blend matter with the mind, we become one with the virtual world and so with virtual resistance. Because in many cases the feeling of virtual reality is still too artificial, the simulated experiences lack every resistance. The absence of resistance is exactly what makes a viewer despair. There’s a disconnection of diverse perceptions; watching, hearing and feeling no longer mix, our body falls apart and our mind gets lost in an overload of information. Virtual reality could reveal the hidden purpose of human ambition, the liberation from gravity. By speeding up, the natural force that keeps us in place is reduced. With increasing ingenuity we have solved the opposition caused by gravity. Human evolution seems motivated by the desire to become advanced, lighter and therefore more divine. We want to control without physical fear. Regardless of which world is being created, its reality is empowered by information. Somehow we have become victims of the desire for advancement. We have become addicted to the speed we interpret as growth and development. There appears to be no technical norm to stop these technical processes and because of the addiction, morality no longer influences us. 
+	          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A film is a kind of virtual reality too, except for the fact that you do not walk through it, you are guided through it. Like virtual reality, film could appear and disappear in total transparency. What is interesting is that virtual reality allows you to create your own digital habitat. If you lose your body, you have still got your eyes. But what happens if you are really involved? If you can really keep a distance while taking people in? To engage physically might be dangerous. To witness a murder is a terrifying experience, even though it is your mind in there, not your body. Still, it is the mind that more or less represents the soul. Your mind is your ego; you bring it along. One of the traps of the virtual world is that we can no longer distinguish virtual from physical reality. Some people have enough problems in this reality, so that when confronted with another reality they might not be able to distinguish between the two anymore. The consciousness of people will change. It is time to adapt, technically as well as mentally. Typography is already integrated into “physical” objects used as a medium to communicate. A book, screen or a print could be seen as physical object where typography is the gateway to information. The world could be seen as a canvas, open to a virtual communicative layer.
+	        </p>
+
+</div>
+<br><br><hr>
+
+<!-------------------------- Chapter 5 ------------------------>
+
+<div class="Chapter5">
+	<A NAME="— Chapter 5">
+        <h3><i>Chapter 5</h3></i>
+        <p><b>— The unified whole, a potential solution —</b><br>
+
+Movie interfaces seen in “Minority Report” , “Iron Man” and “Star Trek” look fantastic 
+<i>(see image 
+<p1>
+<span>16</span>
+  <img src="Images/iron_man_2_holographics.jpg"/>
+  <span>17</span>
+  <img src="Images/MIS_Ch05-014.jpg"/>
+  <span>18</span>
+  <img src="Images/Screen Shot 2017-01-06 at 21.06.09.png"/>
+</p1>
+)</i>, powerful and intelligent navigation to interact quickly in complex information, besides being nice eye candy. If you use one of these interfaces in real life you probably do not want endless animated text and graphs, it should be something clear and easy to use. The designer has to become a sculptor of the environment creating unity. Pattern recognition seems natural to distinguish information from meta-information/data. “Gestalt” is the a subdiscipline of psychology that focuses on cognitive behaviour. The theory provides a good explanation of the potential three-dimensional design values for typography. The gestalt psychology is an attempt to understand the laws behind “the ability to acquire and maintain meaningful perceptions in an apparently chaotic world.” Designers are influenced by the visual aspect of this, particularly the theory that the whole is greater than the sum of its parts. 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By grouping objects, the mind effectively simplifies recognizable parts by making it a single object. Applying the Gestalt theory to design in a virtual world creates unity within a piece. The stronger the relationship between elements in a three-dimensional world, the better the communication. Using the principles of cognitive behaviour helps the designer to influence the viewer by controlling how typography is viewed. Designers working with virtual reality have to make use of proximity, similarity, continuity, closure and figure.
+  Proximity refers to objects placed close together that are then perceived as a group. When spaced far apart 
+  <i>(see example 
+<p1>
+<span>1</span>
+  <img src="Images/Example_01.jpg"/>
+</p1>
+)</i>,
+objects are perceived as separate. Proximity occurs when objects are closer to each other than to any other object. By applying information within a virtual environment, “visual pollution” could easily occur 
+<i>(see video / frame
+<p1>
+<span>15</span>
+  <img src="Images/Screen Shot 2016-12-08 at 09.35.51 copy.png"/>
+</p1>
+)</i>. Information becomes a pile of dense layers. Even though the environment is infinite, it still has a layered viewpoint. The interface of “Iron Man” shows how the virtual workspace applies various typographic proximity rules in order to group information together. The interesting part is that different groups of information become one by an adaptive appearance of typography. Typefaces transform to other typefaces whereby faster connections can be made in information <i>(see link / image  
+<p1>
+<span>16</span>
+  <img src="Images/iron_man_2_holographics.jpg"/>
+</p1>
+)</i>. Pulling and drawing the virtual layers to the user become inevitable as the user determines how information is placed. Proximity becomes key in designing typography for a virtual world. Although the examples 1 to 8 are flat in their appearance, we can imagine how layered information could function within a three-dimensional environment. The strongest proximity relationship is when objects overlap, leaving no doubt that they belong together <i>(see example 
+<p1>
+<span>2</span>
+  <img src="Images/Example_02.jpg"/>
+</p1>
+)</i>. Using connecting design elements, such as lines or shapes to surround objects, creates strong proximity. Connecting elements can link objects by passing through them or by underlining them. Shared visual characteristics automatically create relationships. As seen in the holographic type-sculpture of Dong Yoon Park <i>(see example 
+<p1>
+<span>dong yoon</span>
+  <img src="Images/2000px-Parallax_Example.svg.png"/>
+</p1>
+)</i>, the sculpture immediately creates a typographic whole by using linked shapes in multiple directions. The more alike objects appear, the more likely they are to be seen as a group <i>(see example 
+<p1>
+<span>3</span>
+  <img src="Images/Example_03.jpg"/>
+</p1>
+)</i>, Similarity of information in a three-dimensional environment is based upon what the information looks like, not the content of the information in itself. Similarity of typographic information can be achieved in many different ways, including size, colour and shape. Objects that have the same size have similarity. For example, the mind distinguishes big circles from little circles, classifying them as separate groups. Colour and shape have the same effect <i>(see example 
+<p1>
+<span>4</span>
+  <img src="Images/Example_04.jpg"/>
+</p1>
+)</i>, However, if the circles and squares are all the same size and colour, the mind will classify them according to shape <i>(see example 
+<p1>
+<span>5</span>
+  <img src="Images/Example_05.jpg"/>
+</p1>
+)</i>, 
+  Moving typography in virtual reality attracts the viewer to follow. The principle of continuity dictates that once the eye begins to follow something, it will continue to travel in that direction until it encounters another object <i>(see example 
+<p1>
+<span>6</span>
+  <img src="Images/Example_06.jpg"/>
+</p1>
+)</i>. The image indicates that a viewer should follow the line to the end to see where it is going. A “path” is drawn that guides the viewer. Symbols that are similar to arrows, such as a hand with a pointing finger that is used frequently in design to create continuity. Other ways to lead and navigate the eye is to include a photograph or illustration of a “what to do” image. The use of arrow symbols like in the interface of the movie “Minority Report” <i>(see videolink / image  
+<p1>
+<span>17</span>
+  <img src="Images/MIS_Ch05-014.jpg"/>
+</p1>
+)</i>,
+shows how to swipe content in multiple layers. Immediately
+it becomes clear what to do. Typography supports the navigation.
+A designer can also literally or figuratively create a path through the environment. An image of a road, a path, a fence, a row of flowers or a tunnel can all guide the eye across a virtual environment. For readers from Western cultures, the natural urge is to lead the viewer’s eye from left to right. Within virtual reality, 
+navigation as well as continuity gives the designer significant control over the viewer. Out of curiosity, the mind cannot help but to follow the path. 
+  “Closure” is related to continuity in that it asks the eye to complete a path <i>(see example 
+<p1>
+<span>7</span>
+  <img src="Images/Example_07.jpg"/>
+</p1>
+)</i>. As displayed in the image, almost all essential typographic information is missing. However, as long as enough essential information is present, the active mind fills in the blanks. Limited information can still be recognizable. For example, a letter that has pieces taken away slowly is still recognizable as a letter even when down to a bare minimum of pieces. Complex information, as in multiple letter shapes, is trickier for the mind to complete, especially within a virtual environment. It becomes noise with so many connections that a grouped shape can no longer be constructed. The designer must find a balance between the relationship of typography and the surrounding space. “Iron Man” interfaces as an example “overstimulate”, only he can control the typographic layers by gestures which leaves the viewer of the film feel unfamiliar but curious to the links of content 
+<i>(see video link / image 
+<p1>
+<span>16</span>
+  <img src="Images/iron_man_2_holographics.jpg"/>
+</p1>
+)</i>.
+  “Figure” is also referred to as positive and negative
+space, the positive being the object and the negative referring to the space around it. When letter forms are combined, new counter forms emerge between them. The background now becomes the form, as the letter’s original form submerges <i>(see example 
+<p1>
+<span>8</span>
+  <img src="Images/Example_08.jpg"/>
+</p1>
+)</i>. Submerging forms in a three-dimensional environment are almost inevitable. Negative space gives the illusion of depth and order. A three-dimensional representation of typography depends on the interactivity of the viewer if the letters are layered in a 3D environment. Various depths and orders become a fundamental principle. Applying the gestalt theory in the foreground and background of virtual reality become a parallax. The examples trigger cognitive experiences by getting grip on speed and motion, drawing attention to the user. Applying the Gestallt theory to virtual reality shows how typography challenges the virtual layer to be part of it. The theory shows how endless appearances of typographic connections could occur, providing adaptive methods to take in consideration, deconstructing typography instead of displaying a fixed shape.
+</p>
+
+</div>
+<br><br><hr>
+
+<!-------------------------- Chapter 6 ------------------------>
+
+<div class="Chapter6">
+	<A NAME="— Chapter 6">
+        <h3><i>Chapter 6</h3></i>
+        <p><b>— Recap & discussion —</b><br>
+		
+		The implementation of virtual reality within the contemporary design practice stands 
+        at the beginning of a futuristic era. Virtual reality attempts to integrate into our current 
+        society; sold to the masses through the use of rapid “VR experiences”. Our current state of design and typographic representation is challenged to switch from a 2D to a 3D perspective. 
+        Designers could activate society and social behaviour by connecting people to spatial information. Virtual reality provides a glimpse of a futuristic perspective, with typography as its binding element. Typography is evolving over time. Graphic designers are aware of the necessity to focus on the readability of information. Typefaces will have to adapt quickly in order to keep up the pace with new technologies. 
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No one really knows what the future holds for virtual reality and how typography will change in its behaviour. What we do know is that graphic designers should re-examine their current knowledge to the virtual field. They should integrate virtual reality into their work more so that they become familiar with the visual problems and possibilities virtual reality poses to the graphic designer. The problems of typographic interpolation that exist in virtual reality have to become a point of focus. Established optical rules have to be reformed. Letter shapes and the position of the viewer need to interact to ensure readability of fonts. The limitations of 3D typography are actually the limitations of our own brain to make sense of depth. In order to get past this, it is necessary to use certain tools that enhance the human ability to perceive. Current extensions as phones and screens could be replaced with glasses or lenses to see the virtual layer. One’s ability to digest information in a virtual world depends on one’s ability to accept a parallax. Different distances and motion challenge the user to embrace a layered view. The readability of fonts is dependent on predefined rules. Typography has to make use of a parallax; the position, perspective of the viewer and interactivity determines how the the letters are perceived. Alteration and movement in typography becomes inevitable. The third dimension demands of designers to approach the “canvas” differently. By designing in virtual reality, new hierarchies can be introduced and value can be added to the typographic experience through the use of interactive representations of typography. By interacting with typography in a three-dimensional way, passive reading can be turned into an active reading experience. 
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Visual representations of information could change in the three-dimensional world; integration of current typographic appearances into virtual reality could be the first step. Although skeuomorphism <i>(a visual representation of the previous medium)</i> is not yet the answer, this slow transition to a more workable integration of typography into virtual reality is necessary for the public to get used to the radically new narratives that are made possible by virtual reality. With their current knowledge of design, designers must test how typography could behave. By establishing significance in navigation both information and decoration could become a blend of powerful tools. The third dimension becomes meaningless and hollow if it is not able to actually add value to our life in some way.
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The reinvention of the environment solely as a source of entertainment could become a pitfall in post-modern society. “Visual pollution” could occur. Through hyper reality and gamification, we could become over-simulated and over-stimulated. Mixing the virtual layer with physical reality could create a visual dump that blurs our vision. The designer has to keep in mind that a distinction between virtual reality and physical reality should be made. The possible “disconnection” that could ensue between the user and reality could become dangerous; the designer should not stimulate an actual separation from reality. Virtual typography plays with our consciousness. Our senses should be encouraged to offer resistance. Without resistance, we separate our mind from our body and could become lost in a never-ending flow of information. We have to adapt technically as well as mentally.
+          The gestalt theory could possibly be used to approach typography within virtual reality in a practical way. Cognitive behaviour has to be stimulated. The gestalt theory offers a unified whole rather than an accumulation of separate and incoherent objects. The viewer is not in despair but creates unity and order to understand the environment. A layered viewpoint could provide an extra value in processing virtual information. The parallax of typography becomes a key factor in design that involves virtual reality. The future relevance of typography in virtual reality is bound to the ability of designers to use the parallax as a means to successfully integrate current typography into a third dimension.
+                     
+                    </p>
+
+</div>
+<br><br><hr>
+
+<!-------------------------- Conclusion ------------------------>
+
+<div class="Conclusion">
+	<A NAME="— Conclusion">
+        <h3><i>Conclusion</h3></i>
+        <p>
+
+An evolution of typography is dependent on the interactivity and usability of the virtual layer by the user. As long as the public is ready to adapt and change known habits, it will be ready for typography in virtual reality. Designers must look forward as new technologies emerge. Even though the borders of the graphic design profession blur, the standards, certainties and limitations provide security. If the graphic designer holds on to traditional typographic rules, the profession is threatened to settle into a comfortable but confusing stagnated state and will suffer a disconnection from new media. The graphic designer has to integrate virtual reality into the current field. Combining virtual reality with other design disciplines  pushes the boundaries of graphic design even more. Changing typographic rules, such as adapting its appearance by grouping, can create new possibilities for the use of typography in a virtual environment. The role of typography is changed by virtual reality, the parallaxes that occur through the use of multiple layers in a virtual environment requires an alteration in speed and movement of layers. The way in which the layered three-dimensional view presents type is different from the way in which it is presented in a two-dimensional world. In a three dimensional word, we can literally place ourselves in the content. Applying typography in virtual reality does not necessarily change the appearance of typography itself. The role of typography is based on three-dimensional visibility and the motion of virtual layers. By applying proximity, similarity, continuity, closure and figure the designer could reinvent traditional ways to interpret typographic design in a three-dimensional atmosphere. The pitfall of virtual reality is that it could create a shallow commercial dump of layers that blurs the vision of the user. 
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A parallax, the motion of and distance between different layers of information, provides an active environment of navigation in virtual reality. By inviting the user to easily expose layers instead of accepting surface assumptions, curiosity is stimulated and an active and in-depth deconstruction of information is created. The usage of a parallax in virtual reality is the opposition between a presumably passive reading of a text and an active reading. The imagination of the user actively participates in the creation of an information landscape. Virtual reality encourages typography to act not only as a representation of words and letters, but also as a gateway to expose hidden worlds of information. Different groups of virtual information could blend through a change of the appearance of typography. Typefaces could transform into other typefaces whereby faster connections could be made in layered information. The use of a parallax to display information in layers could create clear connections in a three-dimensional space. 
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The tools to design in virtual reality are already being developed. If the designer loses his interest in technological development within the design field, the designer himself becomes irrelevant. The task of the graphic designer remains the same; to connect people with information and solve visual problems through research. I would argue that, by looking at the development of virtual reality, the designer has to adapt to emerging virtual environments. He can do this by entering into a virtual work-space where he can learn about the various possibilities and limitations of virtual reality. 
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The designer today lives in an in-between state caught between reality and virtual reality. By truly engaging with the medium, the designer could enrich reality with a virtual reality layer. Both layers move at a different speeds but are bound by design. A parallax of technological advancement and reality. Implementing typography in the virtual layer using the current knowledge of design as starting point requires the ability of the designer to think ahead of his time. Virtual reality already attempts to integrate into reality, but there is still a long way to go before virtual reality is fully embraced by larger audiences. I think that these are exciting times for graphic designers as we could reshape our profession into one that operates in a three-dimensional and multi-layered context. Are we ready?
+</p>
+
+</div>
+<br><hr>
+
+<!-------------------------- Acknowledgments ------------------------>
+
+<div class="Acknowledgments">
+	<A NAME="— Acknowledgments">
+        <br><center><p>
+
+		<b>— Acknowledgments —</b><br><br>
+		I would like to mention some amazing people for their great morale, support, boldness and encouragements that gave me confidence.<br><br>
+
+		<b>Thesis supervision:</b><br>
+		<i>Dirk Vis</i><br>
+		<i>Marjan Brandsma</i><br><br>
+
+		<b>Philosophical supervision:</b><br>
+		<i>Maarten Cornel</i><br><br>
+
+		<b>Technical supervision:</b><br>
+		<i>Eric Schrijver</i><br><br>
+		  
+		<b>Special thanks to my family:</b><br>
+		<i>Han Blom</i><br>
+		<i>Ingrid Blom</i><br><br>
+
+		<b>And my cornerstones of the KABK life daily life madness:</b><br>
+		<i>Pascal Schilp</i><br>
+		<i>Thijmen van Brunschot</i><br><br>
+		</p>
+	</center>
+	</div>
+</div>
+
+
+			<!--.......................................................-->
+<!--.......................................................-->
+<!--.......................................................-->
+<!--.......................................................-->
+<!--.......................................................-->
+<!--.......................................................-->
+<!--.......................................................-->
+<!--.......................................................-->
+<!--.......................................................-->
+<!--.......................................................-->
+<!--.......................................................-->
+<!--.......................................................-->
+<!--.......................................................-->
+<!--.......................................................-->
+
+	</div>
+
+<!-------------------------- PRINT ------------------------>
+<!-------------------------- PRINT ------------------------>
+<!-------------------------- PRINT ------------------------>
+<!-------------------------- PRINT ------------------------>
+<!-------------------------- PRINT ------------------------>
+<!-------------------------- PRINT ------------------------>
+<!-------------------------- PRINT ------------------------>
+<!-------------------------- PRINT ------------------------>
+<!-------------------------- PRINT ------------------------>
+<!-------------------------- PRINT ------------------------>
+<!-------------------------- PRINT ------------------------>
+<!-------------------------- PRINT ------------------------>
+<!-------------------------- PRINT ------------------------>
+<!-------------------------- PRINT ------------------------>
+<!-------------------------- PRINT ------------------------>
+<!-------------------------- PRINT ------------------------>
+<!-------------------------- PRINT ------------------------>
+<!-------------------------- PRINT ------------------------>
+
+	<div id="print">
+		<!-- 	In deze div maak je het print gedeelte -->
+
+<div class='start'>
+	<div class="title">
+		<h1><i>— How could virtual reality 
+                change typography? —</i></h1>
+    </div>
+</div>
+
+<div class='content'>
+
+<!-------------------------- Introduction ------------------------>
+
+	<div class="introduction">
+        <A NAME="— Introduction">
+       <p><b>— Introduction —</b><br>
+        
+<i>Graphic design</i> is the practice of connecting people with information, solving visual problems through academic and visual research by critical thought. A designer may employ myriad skills and techniques, while incorporating a collected body of knowledge both design and life related. A designer should not separate the two, they are inseparable. The 20th century definition of a graphic designer no longer applies. A graphic designer today can no longer hide behind the mask of traditional design. He has to adapt his profession, skills and mentality to the potential needs of society within a larger context. A graphic designer is someone who needs to think strategically, critically and beyond established habits. Providing an interdisciplinary perspective influences the design practice. The graphic designer is an agent of change in a rapidly developing practice.
+<br><br>
+<i>Typography</i> is simply understood as the art and technique of arranging letters. The legibility of information is central to the work and skills of a designer to communicate information. Technological advancement was the cause of a more rapid information exchange. During the digitalization of the profession, typography and graphic design made a demanding shift from an analogue to a digitalized form. The digitalization of typography created possibilities for interactive communication. Motion and speed became an important factor in the typographic practice. Migrating analogue typography to the digital created a new perspective. The migration questioned the presence of letters in the new digital media. The acknowledgement within the typographic practice to change direction in order to fit typography into multiple media sizes demanded a change in designing typefaces. However, digital typography remained mostly a two-dimensional representation of information on a screen. Futuristic advancement, such as virtual reality glasses, carefully suggests that digital typography could shift from a two-dimensional to a three-dimensional perspective.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Today, the rapid development of various three-dimensional software makes it easier for designers to work within a three-dimensional atmosphere. A three-dimensional representation of information could have a huge impact on the role of typography and communication in the design practice. Successful alteration of typography in order to answer to a three-dimensional environment could potentially be found within the acquisition of a different perspective. The layeblue perspective of a “parallax” plays with different motions and distances of information. The usage of typography as a gateway in virtual reality drew my attention. It brought me to the question;</p>
+
+<h2><i>“How could virtual reality
+change typography?”</i></h2> 
+
+<p>In order to be able to answer this question, we first have to understand the question itself. Within the thesis I address the potential migration of typography to a three-dimensional atmosphere while additionally touching upon social, conceptual and philosophical considerations.</p>
+
+	<p class="tab">
+	<b><i>&mdash;In the first chapter</i></b> I elaborate on the current state of virtual reality. I discuss the implementation of virtual reality in the design practice. Why and how is this implementation needed? Seeing in different perspectives, a parallax, is clarified. 
+	<br><br>
+	<b><i>&mdash;In the second chapter</i></b> I focus on practical knowledge, potential problems and the adaptability
+	of typography. I address the ways in which typography could change within a three-
+	dimensional environment.
+	<br><br>
+	<b><i>&mdash; In the third chapter</i></b> I focus on earlier attempts to create typography in a three-dimensional way. I address the recent usage of three-dimensional effects and information landscapes. Futuristic perspectives in graphic and type design are discussed as well as expectations, changing landscapes and narratives. I will be touching upon social impact, semiotics, language systems and decoration.
+	<br><br>
+	<b><i>&mdash;In the fourth chapter</i></b> I talk about philosophical considerations on the ways in which virtual reality blends with reality. Hyper reality, resistance,gamification and the reinvention of the environment as themed entertainment are topics that are tackled. I will give special attention to the potential dangers, limitations and possibilities of this unclear boundary between reality and virtual reality.
+	<br><br>
+	<b><i>&mdash;In the fifth chapter</i></b> I give a presumption of a solution to the question, I will explain the relevance of the gestalt theory for designers and will discuss its potential application. By addressing practical knowledge of layeblue information, the emerging problems of typography in a three-
+	dimensional atmosphere can be discussed. 
+	<br><br>
+	<b><i>&mdash;In the sixth chapter</i></b> I provide the reader with a recap of the thesis and will briefly discuss topics that are beyond the scope of this research but are worth further discussion and research. 
+	<br><br>
+	<b><i>&mdash;Finally, I conclude</i></b> with my answer to the question and explain how designers could manage typography in virtual reality.</p>
+</div>
+<br><br><br>
+<hr>
+
+<!-------------------------- Chapter 1 ------------------------>
+
+<div class="Chapter1">
+	<A NAME="— Chapter 1">
+        <h3><i>Chapter 1</h3></i>
+	       	<p><b>— Virtual reality? —</b><br>
+         
+            The first references to the concept of a digital three-dimensional space came from science fiction around 1950. The term <i>“virtual reality”</i> refers to technology that replicates a real environment while actually providing the user with a simulation of a physical presence within a three-dimensional environment. The interactive experiences stimulate the human senses. Virtual reality introduces the user to a digital world by replacing the stimuli of reality with digital content. The beauty and power of virtual reality is that a designer can create all kinds of worlds with typography, images and sound. 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The experience of virtual reality could be compablue with the experience of a dream. Hypnotized by this experience, people rapidly become more willing to be manipulated. Just like in the early 2000s when we could not yet fully fathom the political, economic and societal implications of the invention of the mobile phone, we can only speculate what virtual reality could bring us in the near future. Users thought that the mobile device could grant them an amazing technological advancement in communication. The millions of mobile apps that were created enabled the user to communicate in a more individual, impersonal and abstract way. Digital media became a wave of endless possibilities. In the last ten or fifteen years the computer seems to have slowly been replaced by the smartphone. The possibilities of technological advancement seem endless. Introducing or popularizing virtual reality within society could trigger a new wave of interactive and social possibilities. However, we have to question the influence of technology on our social behaviour. Did we become lazy, isolated beings who are too dependent on technological advancement? Rapid communication enables us to connect in an impersonal way. People are bound to their devices. Is there a way to activate our current society and stimulate social behaviour? The usage of typography within a three-dimensional environment and the usage of three-dimensional design in a meaningful way could play a key role in developing a new form of social behaviour. How can we, as designers and participators, stimulate our current society? Virtual reality could be an answer with typography as binding element.<br><br>
+
+<b>— The current state of virtual reality —</b><br>
+It is exciting to see the development of virtual reality today. It might lead to important changes in human life and activity. Virtual reality already attempts to integrate into our daily life and activities, currently sold to the masses through virtual reality “experiences”. Clear and well-known examples are Google glasses and VR glasses. Both are head-mounted, portable computers shaped as a pair of eyeglasses that display information in a smartphone like hands-free format <i>
+
+<span class="footnote">Footnoot</span>
+
+
+(See image  
+  <p1><span>1</span>
+    <img src="Images/82c117b483c0eab8c0f0ee0023ae0408.jpg"/>
+ and
+  <span>2</span> 
+    <img src="Images/481ff1080ca0e8427ed7573113e3d563.jpg"/></p1>
+)</i></i>.
+            Virtual reality is on the rise and it challenges the public and the graphic designer. Still, the three-dimensional visual and virtual world still leaves a lot to be desired. Information exchange, typography and the usage of communication systems have the potential to become a work field for the graphic designer. Within virtual reality, visual contact is made through the connection of various elements. With the presence of typography, images, movement, sound, three-dimensionality, and interactivity in real time, a lot is happening in the virtual environment. Virtual reality requires a blend of multiple professions; the borders of graphic design fade. Virtual reality extends the boundaries of the graphic design profession. The graphic designer becomes a sculptor of an environment by combining all senses. The application of typography in virtual reality generates a discourse: even though it has been examined, we do not know a lot about it. However, typography is an important aspect of virtual reality since it could provide the user interactive direction and navigation. The readability of information becomes a key factor in spatial information. The question is how the third dimension can be used within typographic and graphic design. Virtual reality extends the integration of the senses in these cinematic virtual places. How can the designer make people become comfortable with spatial information and solve emerging visual problems? Typography could become an interactive tool, an element to navigate and connect.
+<br><br>
+  <b>The parallax</b><br>
+Within a three-dimensional world, the displacement or difference in the apparent position of an object is called a <i>“parallax”</i>. A parallax is seeing objects in different perspectives from different points of view <i>(see image 
+<p1>
+<span>3</span>
+  <img src="Images/2000px-Parallax_Example.svg.png"/>
+</p1>
+)</i>.
+         To explain: typography can be viewed along different lines of sight in a three-dimensional world. This contradicts our current two-dimensional viewpoint. We see the letters only from the front. The position of typography within a three-dimensional world can be measured by the angle or semi-angle of inclination between two lines. Due to foreshortening, nearby “objects” have a larger impact than more distant objects when observed from different positions. For example, when one drives a car, the foreground of the environment appears to move faster than the background. The dynamics of a parallax can be used to determine distances between objects or layers. Migrating current typography to virtual spaces is problematic since, when doing this, the legibility in the third dimension becomes complex. The viewers are used to a two-dimensional viewpoint. Words far away or behind the user in a space cannot be read and words too close cannot be seen as information, they become a shape. Information could become a clutter of layers or even invisible when viewed from different angles. By navigating through a three-dimensional landscape, fixed letters could for example rotate 90 degrees so that they become invisible, or 180 degrees so that they become unreadable. The three-dimensional impact of virtual reality on typography has to be investigated.</p>
+         <br><br>
+
+</div>
+<hr>
+
+<!-------------------------- Chapter 2 ------------------------>
+
+<div class="Chapter2">
+	<A NAME="— Chapter 2">
+        <h3><i>Chapter 2</h3></i>
+        
+	    <p><b>— Typography —</b><br>
+        The shift to digital media changed what we could do with analogue type design. The alteration of typography addressed a very basic problem: <i>font interpolation</i>, which means that a fonts design is modified in such a way that it is usable in multiple media sizes. Media such as print or a computer screen have their practical limits. The translation of the style of a font represents the same challenge to inherent breakpoints: by scaling typography set in a certain font, the legibility is compromised. Scaling scentences from a 50 cm by 100 cm print to a 13-inch computer screen negatively influences the readability. Directly translating the print itself to fit the screen makes the words unreadable. The print has to be “scaled down” to ensure the correct appearance of the sentences. To make the words readable on the screen the information has to be altered and transformed. The medium break sentences and words so that they fit the medium and become readable. Within the typographic practice, this problem can be solved to a certain extent in a 2D spectrum <i>(see image 
+        <p1>
+        <span>4</span>
+          <img src="Images/5794.png"/>
+        </p1>
+        )</i>.
+         However, in a virtual reality atmosphere, 3D typography pushes the boundaries of traditional design <i>(see image 
+        <p1>
+        <span>5</span>
+          <img src="Images/abbott_dimenp.jpg"/>
+        </p1>
+        )</i>.
+         A font could become layered, adaptive, linked and context-aware based on the medium it emerges in. Virtual reality could otherwise turn into a maze of three-dimensional layer clutter <i>(see image 
+        <p1>
+        <span>6</span>
+          <img src="Images/Yoon_RISD_Courtesy-of-The-RISD-Museum-650x433.jpg"/>
+        </p1>
+        )</i>.
+          Font interpolation — the modification of the design of a letter to fit multiple media sizes — can create truly responsive typography. Traditional font interpolation used to be a process. From a “master font” new intermediary fonts were created. The “Univers” typeface <i>(see image 
+        <p1>
+        <span>7</span>
+          <img src="Images/univers 21 weights.jpg"/>
+        </p1>
+        )</i>, was designed by the Swiss typographer Adrian Frutiger in 1954. He designed twenty-one versions of Univers, all in five weights and five widths. Whereas some type families changed over time, Univers was visualized as a fixed system of different fonts that originate from the “master font”. Master fonts represent key prototypical designs across different recognizable points in a font family. To adjust typography and ensure that it fits multiple media sizes, math was introduced. Parametric and coded rules can generate various “children” of the original master font” <i>(see image 
+        <p1>
+        <span>8</span>
+          <img src="Images/NoordzijCube.gif"/>
+        </p1>
+        )</i>.
+         Instead of designing fonts manually, type designers were now able to derive additional font variants/weights from interpolation. By applying this concept to 3D typography, the same problem rises. <i>(see image 
+        <p1>
+        <span>9</span>
+          <img src="Images/2000px-Parallax_Example.svg.png"/>
+        </p1>
+        )</i>. Different font variants require different spacing, however within this extra dimension different rules apply. When two-dimensional, interpolated, type designs have been created they are being exported mostly as separate font weights and alterations: Extra Thin, Thin, Semi Thin, Extra Light, Light, Semi Light, Plain, Regular, Semi Bold, Bold, Extra Bold, Semi Black, Black, Extra Black, Extended. I do not argue that 3D typography does not have the same amount of possibilities, however, two-dimensional typography is based on established optical rules. The implementation of an extra z-axis – depth – in a typeface changes the known interpolation and spacing. The typographic experience is expanded by the increasing range of context and direction related positions that are available to the viewer <i>(see image 
+        <p1>
+        <span>9</span>
+          <img src="Images/tumblr_nk7b7pNWtp1qcdhido1_1280.jpg"/>
+        </p1>
+        )</i>.
+         Different representations of the letters are shown from different perspectives. The apparent change in the relative position of two points due to a change in the position of the observer is also called a “parallax”. This is where the brain perceives depth based on the difference in the position of the shapes <i>(see image 
+        <p1>
+        <span>10</span>
+          <img src="Images/parallax-scrolling-effect.jpg"/>
+        </p1>
+        )</i>. The readability of information becomes a key issue within spatial information. Interpolation can alter more than just font weight as it could cause the fundamental structure of a font to change <i>(see image 
+        <p1>
+        <span>11</span>
+          <img src="Images/3d-path-preview.jpg"/>
+        </p1>
+        )</i>. Virtual typography has, like digital typography, an infinite number of poles and axes linked to a combination of coded rules. The question is if there is value in an extra typographic dimension. How can the rules in the infinite dimension be determined? The ways in which information is exchanged and received is influenced by an illustrative effect more than by the communicative value. The extra dimension in a font could become a simulation that creates decoration. The way we digest information depends on the typographic application of shapes within the context. Typography becomes a subdivision of the environment and plays a vital role in the way information is perceived. Although current interpolated fonts provide flexibility in usage, the static letters are mostly bound by their 2D nature. Type is tied to its own appearance and the usability in a medium. 
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Interpolation influenced the way that type was designed and set in its time. An attempt was made to display a three-dimensional view by using typographic motion in film. However, this was still a 2D display of a 3D world. A layered environment attempts to solve this problem, although legibility is still an issue. 3D 
+        typography is in need of more significant adjustments. It can be placed in an ever-changing environment in which the user 
+        participates. Typography depends on the parallax, the motion, position and perspective of the viewer. Alteration, range and hierarchy in a three-dimensional perspective become inevitable. The role of the graphic designer becomes relevant as he plays with these. A new hierarchy in the exchange of information could be introduced. A traditional hierarchy, to display typography, as argued by Erik Blokland; “Book - page - layout - column - paragraph - line - word - letter - shape” could be re-considered within a virtual 3D environment. “Virtual reality - 360° environment - depth - layers - word - letter - shape - gateways”. Setting type on a line has a width that comes from the page, a word has a width that comes from its shapes, the hierarchy is broken when implementing typography in a virtual environment. Words with an infinite width become unreadable. Our eyes cannot separate type from shape anymore. All sentences and word “objects” have their own problems and requirements. As argued by type designer Gerrit Noordzij; “typography is writing with prefabricated letters.” Prefabricated in the sense of not knowing where they will be used. This is why common sizes were introduced. Applying prefabricated typography to a 3D environment might “damage” a fixed font as prefabricated shapes have limited adaptability. Legibility of typography in an infinite dimension becomes the main focus.</p>
+
+
+        <p class="tab">
+        <b>— Coding typography —</b><br>
+        The mathematical position of the parametric points of a typographic letter create a fixed structure. In order to be able to recognize the letter “P” as such, it needs predefined points. The points separate a “P” from an “A”. However, if the font data/appearance is not positioned as a fixed shape of points, undefined rules tempt to do their work by logic/math. If there are no rules defined in 2D and 3D, the typeface rescales in all points in all directions, out of bounds. Scaling or stretching a font in 3D to create interpolation, distances and type-appearances, could result in overlapping shapes. The code defined by the designer becomes a rule to limit the typography and its behaviour to ensure readability in a three-dimensional atmosphere. Traditional prefabrication is no longer useful, the font itself is able to adjust to the peculiarities of a third dimension. Of course you could argue that the construction of the font in such a way is also prefabrication. Prefabrication could be useful to 3D typography; geometric shapes have to deal with the relation towards each other. However, the floating type exists with infinite boundaries in virtual reality and is only limited by defined rules. When the extremes are defined they can be controlled. 
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Interpolation allows for precise size-specific adjustments 
+        in order to take into account the different distances at which a reader can perceive type. The “letters” in depth could be too far away to be readable. Far away distances of typography or captions in small sizes simply lose detail as the eye cannot distinguish typography from shape anymore. A font’s legibility and readability adjustments must be linked to accessible options. Accessible options can be points or signs to access information positioned on an x-y and z grid. A challenge is rendering interpolated type quickly and smoothly. Smooth transitions in a font lined up with the original shape can minimize the optical and visual change rather than rapid flashy size changes. The typography becomes a never ending movement. There is never one “standard” view. 
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Has typography lost its validity in a three-dimensional world? A 3D letter is not particularly necessary to communicate information in a three-dimensional atmosphere. The designer has to start to think in accessible layers, distances and motion. This is where a parallax comes in, a layered view of information accessible to the user at any time. Like browsing through a website, the exposure of layers becomes the main focus. A three-dimensional parallax could provide an overview of layers that provide a gateway to various virtual worlds.
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;High-contrast or low-contrast letters often require separately drawn poles between the extremes to help maintain the relationship between thick and thin within the letters. In some situations where rescaling takes place, elements of a letter are forced to get thin, for example the crossbar of the lowercase ‘e’.  By rescaling or moving it to different distances the thin bar could disappear in the background. Some type designs could get so extreme that the letter shape is forced to change, such as replacing a combined form <i>(as an example “oe”)</i> with a custom and single glyph <i>(“&oelig;”)</i> for various sizes. Typography will most likely change in virtual reality as different perspectives change how it is seen by a user. By adding a third dimension to the typographic practice, type-designers as well as graphic designers have to adjust their approach to design rather than to treat typography in a traditional way. The perception of multiple perspectives of typography requires a break with established rules. A designer has to look for useful three-dimensional usage of typography in various “landscapes” of media instead of importing a two-dimensional typeface to a three dimensional perspective <i>(see image 
+        <p1>
+        <span>10</span>
+          <img src="Images/parallax-scrolling-effect.jpg"/>
+        </p1>)</i>.</p>
+
+</div>
+<br><br><hr>
+
+<!-------------------------- Chapter 3 ------------------------>
+
+<div class="Chapter3">
+	<A NAME="— Chapter 3">
+        <h3><i>Chapter 3</h3></i>
+        <p><b>— Narrative systems —</b><br>
+
+Virtual reality is able to create a new narrative form. One that current technical and stylistic norms are unable to. The designer could introduce a new way of communicating information in a virtual environment through the use of image, symbols or even a new genre in typography itself. Providing great typographic experiences with the wide range of devices that exist nowadays is hard to do considering the current state of 3D typography. Users are served poor reading experiences that do not adapt to the environment in which the reading takes place. Currently no third dimension exists that could interact with the user. Screens are still a two-dimensional representation of a three-dimensional environment. This is also one of the central issues discussed in modern literary theory. To summarize: it is the opposition between a presumably passive reading of a text and an active, deconstructive reading that imaginatively participates in the text’s creation.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The relationship between information and decoration has always been at the centre of research on a graphic design and scientific level. Depending on appearance, information and decoration are close to an image. Structure, harmony, frequencies, appearance, composition and rhythm binds them. A typographic language possesses a system of signs communicating in space and time through several formats. The oddity of typography is its existence under several states and times. Written or performed, changing its own visibility as communication advanced <i>(see image 
+<p1>
+<span>13</span>
+  <img src="Images/alphabet.gif"/>
+</p1>
+)</i>. Typographers and graphic designers could consider to re-examine the current visual language as digital and virtual media continue to advance. Typography is bound to its two-dimensional established rules. Even though typography became virtually accessible, the shift to virtual reality never really changed typography. Like the digitalization of typography, letters became a copy of the original analogue presentation. Although possibilities emerged to create depth as an effect in a letter <p1>
+<span>12</span>
+  <img src="Images/letters-preview.jpg"/>
+</p1>
+)</i>, 3D typography remained a gimmick used for illustrative and commercial purposes. Looking at the history of typography itself, from ancient cave signs to our present type shapes <i>(see image 
+<p1>
+<span>13</span>
+  <img src="Images/alphabet.gif"/>
+</p1>
+)</i>, the transition of letter shapes occurred through technological advancement and speed. Throughout history, typographic shapes have changed. Today, the designer could re-examine typography by questioning the contemporary symbols and shapes within a three-dimensional world. Designers could look beyond text and images, introducing adaptive three-dimensional typography to suit each virtual world. By this I do not mean we should completely abandon our hard-fought and readily established typographic tradition. Introducing traditional typography and media to a three-dimensional world can be a first step. 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A linear narrative, such as reading a book or scrolling through the web, has evolved to break down the limitations posed by time and emotive viewpoint. A narrative placed in a virtual reality could apply the concept of immersion, engaging the perceiver to be focused on the information by concentrating on one course of instruction, subject, navigation symbol or project to exclude other stimuli. Interactivity can develop a new system of reading and thereby navigation. The trap is the spectacle; applied effects that look impressive but do not communicate the message. By applying predefined effects <i>(see image 
+<p1>
+<span>14</span>
+  <img src="Images/8ff2d_aug22_haarlem_img.jpg"/>
+</p1>
+)</i>, the medium becomes the massage instead of the message. The current state of three-dimensional typography in both analogue and digital media is a two-dimensional representation of a three-dimensional world. Bevel and embossing <i>(technique to create a 3D effect with type, see image 
+<p1>
+<span>14</span>
+  <img src="Images/8ff2d_aug22_haarlem_img.jpg"/>
+</p1>
+)</i>. a typeface simply gives a suggestion of 3D information. It has nothing to do with transitional information or a system to steer the viewer. 3D suggestions are simply an illustration of information, better known under the term “skeuomorphism”. Skeuomorphism is basically the design concept of imitating the appearance of a real-world counterpart. For example actually flipping through pages on an iPad screen. This is an action that imitates the actions related to reading a book in real life. The content on the screen becomes a representation of the old medium which is strange as the book is a completely different medium. It becomes irrelevant to use the digital medium, there is no advancement only imitation. Skeuomorphism is a misleading, decorative approach to the sense of a book. You can see skeuomorphism as a transitional phase between the old and the new. Although used in many design fields such as interface, web and interior design, flat design simply gets “ decorative contrast” attempting to create three-dimensional effects on a two-dimensional surface. The efficiency of three-dimensional typography in virtual reality will rely on the effectiveness of simple navigation to attract the attention of the viewer to the information.
+</p>
+
+		<p class="tab"><b>— Information landscapes —</b><br>
+		Muriel Cooper introduced the “information landscapes”. She was one of the first designers that applied responsive informational landscapes to 3D topological spaces <i>(see image 
+		<p1>
+		<span>15</span>
+		  <img src="Images/06.jpg"/>
+		</p1>
+		)</i>. What intrigued was that she revealed connections and information that could not be expressed in print. She introduced an alternative system to perceive information. Just like web-based information, hyperlinking became a responsive way to navigate through complex data of information. Within the project multiple layers helped establish a context and gave the viewer a sense of place in the new “space”. Our cognitive and perceptive systems had to work together. So what did we learn? These systems could become one. Graphic designers could connect them by blending information so that effects and illustration could become a coherent whole. The concept of establishing interactive layers of typography is key in defining the thesis question. The role of typography changes as it could be used as a layer or link, a gateway, if you will, to navigate through different three-dimensional worlds of information. Futuristic movies speculate about three-dimensional landscapes, think about Minority Report <i>(see image 
+		<p1>
+		<span>17</span>
+		  <img src="Images/MIS_Ch05-014.jpg"/>
+		</p1>
+		)</i>, Iron Man <i>(see image 
+		<p1>
+		<span>16</span>
+		  <img src="Images/iron_man_2_holographics.jpg"/>
+		</p1>
+		)</i> or Star Trek <i>(see image 
+		<p1>
+		<span>18</span>
+		  <img src="Images/Screen Shot 2017-01-06 at 21.06.09.png"/>
+		</p1>
+		)</i>. In these movies the user browses through information and, by constructing several virtual layers around him, is provided with an overview of content. Typography is used as a supportive layer of a virtual interface: providing an interactive experience by hyperlinking each word to a different atmosphere. Parallaxes appear, distances and motion groups typography to link information whereby customizable narratives develop. By going “in” the virtual layer, the user sculpts the world around him constantly expanding or removing typography and images. Although the virtual layers are futuristic presumptions, the examples show how typography could act as a layered tool.
+		</p>
+
+<p><b>— Language —</b><br>
+When it comes to content, form and vocabularies, the semiotics <i>(the study of signs and symbols and their use or interpretation)</i> and semantics <i>(logic)</i> could be revised within a three-dimensional world. Migrating information to a three-dimensional environment has to be done in a meaningful way. The translation of a dictionary requires a different approach from one that is required for the translation of a simple hand sign. For a dictionary, the connections have to be logical, alphabetical order has to be implemented. A simple hand sign could serve as a navigation tool; the symbol only needs recognition or interaction in order to know what to do. Providing significance of navigation through information becomes the task of the designer. By blending semiotics and semantics together the designer could blend an informative and decorative world of interactive tools. The representation of information could become a three-dimensional landscape of navigation through knowledge <i>(see image 
+<p1>
+<span>16</span>
+  <img src="Images/iron_man_2_holographics.jpg"/>
+</p1>
+)</i>. 
+  Using typography in 3D environments as 3D shapes has two contradictory points. Firstly, the use of three-dimensional typographic shapes could simply be seen as a decoration of information that renders the third dimension meaningless. Secondly, a 3D shape could provide an assumption of broadening knowledge triggering curiosity, adding value to transport to another world of information. Like Alice in wonderland following a white rabbit to find out what is there to be exposed <i>(see image 
+<p1>
+<span>19</span>
+  <img src="Images/alice-in-wonderland-classic-disney-24501729-430-314-1.gif"/>
+</p1>
+)</i>. The urge for two-dimensional simplicity is the equivalent of self-denial. Decoration could be compared to appreciation, understanding craft and emotion. Designers need to control their first sensations and expressiveness, as there is limited knowledge of typographic application in virtual environments. With the use of decoration in design professions, the designer has become more redefined. The general answer to decoration is that people feel like design should be functional. However, if you use decoration in an expressionistic manner, you could use it to actually say something, adding value. Ornaments can be good for development by bringing aesthetic value to information, but mostly, the connection between information and decoration is missing. Three-dimensional typography becomes a subjective matter; the perception of order, decoration and meaning could potentially blend. Virtual reality becomes our canvas, but for now we’re cramming it <i>(see image 
+<p1>
+<span>6</span>
+  <img src="Images/Yoon_RISD_Courtesy-of-The-RISD-Museum-650x433.jpg"/>
+</p1>
+)</i>. At this very moment, it seems like we are in a decorative period of applying typography in a three-dimensional atmosphere. With virtual reality software at hand, expressing ourselves has become easier than ever. Focusing on typographic implementation within a three-dimensional environment could lead to narratives that go beyond the imagination in our time. The designer has to keep in mind that each person understands and perceives a built environment differently. The difference in understanding three-dimensional content has to do with personal interpretation of text and images. The task is to communicate information the way it should be perceived. A designer has to take the lead and steer the viewer in the right direction in order to receive information in the clearest/most proper way. Simplifying information does not happen solely through the use of the technology of virtual reality itself; it is about using a parallax, a layered view to understand information in a simple and understandable way. By accessing typographic layers with gestures that people are familiar with today, such as scrolling or swiping through a webpage, designers can test and expand the virtual reality boundaries. The layers should be intuitive so people can instinctively use it the right way as a first step. 
+</p>
+
+
+</div>
+<br><br><hr>
+
+<!-------------------------- Chapter 4 ------------------------>
+
+<div class="Chapter4">
+	<A NAME="— Chapter 4">
+        <h3><i>Chapter 4</h3></i>
+        <p><b>— Hyper reality and philosophical considerations —</b><br>
+
+        Hyper reality, “the inability of consciousness to distinguish reality from a simulation of reality”, requires a watchful eye on future design practices. The notion of the audience shifts as it encounters the virtual world. Social, cultural, philosophical, materialistic and political contexts of the contemporary design field are in need of a critical, post-modern look in virtual reality. Hyper reality could become a dangerous aspect of virtual reality, especially in technologically advanced postmodern societies. Hyper reality is seen as a condition in which what is real and what is fiction blend so well together that there is no clear distinction between where one ends and the other begins. A clear example of this is the speculative movie of Keiichi Matsuda named “HYPER-REALITY” 
+        <i>(see video / frame 
+        <p1>
+        <span>15</span>
+          <img src="Screen Shot 2016-12-08 at 09.35.51 copy.png"/>
+        </p1>
+        )</i>.
+
+         With this project, Keiichi Matsuda allows the merging of physical reality with virtual reality. The reinvention of the environment as themed entertainment could be the pitfall of post-modern society. Pitfall as in a crammed space around the user; an overload of information that detaches him from reality. It is difficult to find something that does not revel in a certain degree of simulation. Within the project, social communication becomes blurred as the user is always busy with distractions. By showing an interactive game-based society, the person’s identity is bound to chievements/rewards. As the virtual layer falls apart by a “hack” of the person, the “identity” is lost. The society becomes dependent on virtual layers. Multiple parallaxes occur, motion, speed and various distances of layers attract the user to act. Like commercial pop-ups on web browsers, information appears and disappears. Virtual typography performs as a reproduction of its two-dimensional origin and tends to behave like graffiti attached to physical objects. The use of multiple parallaxes shows how typography could act as a virtual layer in reality. Typographic “symbols” or “surface covers” activate information and redirect the user to overlying layers, providing in-depth knowledge. The creator shows the world as a three-dimensional smart-phone, revealing and hiding layers of information. 
+         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Virtual reality changes the role of typography as the shapes become an entrance to a virtual and “hidden” world. Letters could act as a gateway to enter a simulated reality, a matrix <i>(see image 
+        <p1>
+        <span>20</span>
+          <img src="Images/15942047_1195553183870033_1871387949_n.jpg"/>
+        </p1>
+        )</i>. Typography becomes a rabbit hole, referring to Alice in wonderland, the deeper you tumble in, the more you find out how deep it actually is. By literally going “into” the typography, the letters become a keyhole to different worlds. Like the code from the Matrix movie, the letters lead the viewer to a different reality. Virtual reality changes typography to act not only as a representation of words and letters, but as a gateway, exposing hidden worlds of information. 
+        <br></p>
+	        <p class="tab">Game-based interactive learning shows that man learns best by doing or by being. A growing number of gamers find themselves, for different reasons, more involved with the hyper-real game world and less with the physical world. This “disconnection from reality” shows how virtual reality requires a different approach to typography. Gamification of typography could become a distraction to the actual information. By making reality a game, we play with our consciousness. By adapting our senses and placing a virtual layer in reality, “visual pollution” and “over-stimulation” could take place. By this I mean that it could lead to a certain desperation of endless visual options, blurring our vision. The distinction between information and decoration becomes blurred. Reality could become a visual dump. Spatial awareness could become very powerful, and very specific signifiers of common ideas. 
+	        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This world’s reality might change, considering how every typographic shape can be applied within a virtual layer. Virtual reality should however not lose the awareness of spatial perception. In the movie “HYPER REALITY”, navigation systems are taken to the next level by their ability to literally draw a road of where you have to go. By introducing virtual worlds into physical spaces, we can endlessly speculate about how our reality can be adapted or even enhanced in an ever-present overlay of layers. Virtual reality becomes subjective. Everybody has its own perception of what it could be. Additionally, the virtual layer could become a customizable landscape as a reflection of someone’s personal taste and interest. However, the designer imposes his projection of information on the public, whether the public is invited or not. Designers have to make sure virtual information does not exclude the user of the environment. Our environment could transform us into an egocentric isolated self <i>(See video / frame 15)</i>.
+	          <i>(see video / frame 
+	        <p1>
+	        <span>15</span>
+	          <img src="Images/Screen Shot 2016-12-08 at 09.35.51 copy.png"/>
+	        </p1>
+	        )</i>. 
+	          In a game-based world, we separate our mind from the body. Our body becomes a digital avatar, a figure representing a particular person in a computer game. Our mind is “in” the game, our physical body is “out”. Virtual reality attempts to do the same. By wearing virtual reality glasses we separate our body from our mind. We “deny” our body to take part in the virtual world while our mind fully participates. Rapid images are seen as truth, regardless of the background information. Just like television, we have a tendency to accept all that is shown. Truth and fiction blend as a new factual reality. The manipulation of movement and time is the essence. Without interactivity our tactility and body is lost. Stimulation of both the mind and the senses has to be integrated. If the designer does not integrate these, we become robots. Resistance becomes the keyword in this. Reality offers resistance. If we try to imagine a world without resistance, there seems to be only one factual realization of it: virtual reality. It provides a glimpse of a future perspective, with typography acting as a binding element between reality and virtual reality. Within technical advancement man has come to see not only the world but also himself as an accelerating movement, a development. If we maintain the contrast between body and mind, you can conclude that acceleration has taken over the mind via the body. And like communication of information to the masses, the distinction between truth and reality has become blurred. Because of the lack of resistance within a virtual world it becomes possible to blend matter with the mind, we become one with the virtual world and so with virtual resistance. Because in many cases the feeling of virtual reality is still too artificial, the simulated experiences lack every resistance. The absence of resistance is exactly what makes a viewer despair. There’s a disconnection of diverse perceptions; watching, hearing and feeling no longer mix, our body falls apart and our mind gets lost in an overload of information. Virtual reality could reveal the hidden purpose of human ambition, the liberation from gravity. By speeding up, the natural force that keeps us in place is reduced. With increasing ingenuity we have solved the opposition caused by gravity. Human evolution seems motivated by the desire to become advanced, lighter and therefore more divine. We want to control without physical fear. Regardless of which world is being created, its reality is empowered by information. Somehow we have become victims of the desire for advancement. We have become addicted to the speed we interpret as growth and development. There appears to be no technical norm to stop these technical processes and because of the addiction, morality no longer influences us. 
+	          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A film is a kind of virtual reality too, except for the fact that you do not walk through it, you are guided through it. Like virtual reality, film could appear and disappear in total transparency. What is interesting is that virtual reality allows you to create your own digital habitat. If you lose your body, you have still got your eyes. But what happens if you are really involved? If you can really keep a distance while taking people in? To engage physically might be dangerous. To witness a murder is a terrifying experience, even though it is your mind in there, not your body. Still, it is the mind that more or less represents the soul. Your mind is your ego; you bring it along. One of the traps of the virtual world is that we can no longer distinguish virtual from physical reality. Some people have enough problems in this reality, so that when confronted with another reality they might not be able to distinguish between the two anymore. The consciousness of people will change. It is time to adapt, technically as well as mentally. Typography is already integrated into “physical” objects used as a medium to communicate. A book, screen or a print could be seen as physical object where typography is the gateway to information. The world could be seen as a canvas, open to a virtual communicative layer.
+	        </p>
+
+</div>
+<br><br><hr>
+
+<!-------------------------- Chapter 5 ------------------------>
+
+<div class="Chapter5">
+	<A NAME="— Chapter 5">
+        <h3><i>Chapter 5</h3></i>
+        <p><b>— The unified whole, a potential solution —</b><br>
+
+Movie interfaces seen in “Minority Report” , “Iron Man” and “Star Trek” look fantastic 
+<i>(see image 
+<p1>
+<span>16</span>
+  <img src="Images/iron_man_2_holographics.jpg"/>
+  <span>17</span>
+  <img src="Images/MIS_Ch05-014.jpg"/>
+  <span>18</span>
+  <img src="Images/Screen Shot 2017-01-06 at 21.06.09.png"/>
+</p1>
+)</i>, powerful and intelligent navigation to interact quickly in complex information, besides being nice eye candy. If you use one of these interfaces in real life you probably do not want endless animated text and graphs, it should be something clear and easy to use. The designer has to become a sculptor of the environment creating unity. Pattern recognition seems natural to distinguish information from meta-information/data. “Gestalt” is the a subdiscipline of psychology that focuses on cognitive behaviour. The theory provides a good explanation of the potential three-dimensional design values for typography. The gestalt psychology is an attempt to understand the laws behind “the ability to acquire and maintain meaningful perceptions in an apparently chaotic world.” Designers are influenced by the visual aspect of this, particularly the theory that the whole is greater than the sum of its parts. 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By grouping objects, the mind effectively simplifies recognizable parts by making it a single object. Applying the Gestalt theory to design in a virtual world creates unity within a piece. The stronger the relationship between elements in a three-dimensional world, the better the communication. Using the principles of cognitive behaviour helps the designer to influence the viewer by controlling how typography is viewed. Designers working with virtual reality have to make use of proximity, similarity, continuity, closure and figure.
+  Proximity refers to objects placed close together that are then perceived as a group. When spaced far apart 
+  <i>(see example 
+<p1>
+<span>1</span>
+  <img src="Images/Example_01.jpg"/>
+</p1>
+)</i>,
+objects are perceived as separate. Proximity occurs when objects are closer to each other than to any other object. By applying information within a virtual environment, “visual pollution” could easily occur 
+<i>(see video / frame
+<p1>
+<span>15</span>
+  <img src="Images/Screen Shot 2016-12-08 at 09.35.51 copy.png"/>
+</p1>
+)</i>. Information becomes a pile of dense layers. Even though the environment is infinite, it still has a layered viewpoint. The interface of “Iron Man” shows how the virtual workspace applies various typographic proximity rules in order to group information together. The interesting part is that different groups of information become one by an adaptive appearance of typography. Typefaces transform to other typefaces whereby faster connections can be made in information <i>(see link / image  
+<p1>
+<span>16</span>
+  <img src="Images/iron_man_2_holographics.jpg"/>
+</p1>
+)</i>. Pulling and drawing the virtual layers to the user become inevitable as the user determines how information is placed. Proximity becomes key in designing typography for a virtual world. Although the examples 1 to 8 are flat in their appearance, we can imagine how layered information could function within a three-dimensional environment. The strongest proximity relationship is when objects overlap, leaving no doubt that they belong together <i>(see example 
+<p1>
+<span>2</span>
+  <img src="Images/Example_02.jpg"/>
+</p1>
+)</i>. Using connecting design elements, such as lines or shapes to surround objects, creates strong proximity. Connecting elements can link objects by passing through them or by underlining them. Shared visual characteristics automatically create relationships. As seen in the holographic type-sculpture of Dong Yoon Park <i>(see example 
+<p1>
+<span>dong yoon</span>
+  <img src="Images/2000px-Parallax_Example.svg.png"/>
+</p1>
+)</i>, the sculpture immediately creates a typographic whole by using linked shapes in multiple directions. The more alike objects appear, the more likely they are to be seen as a group <i>(see example 
+<p1>
+<span>3</span>
+  <img src="Images/Example_03.jpg"/>
+</p1>
+)</i>, Similarity of information in a three-dimensional environment is based upon what the information looks like, not the content of the information in itself. Similarity of typographic information can be achieved in many different ways, including size, colour and shape. Objects that have the same size have similarity. For example, the mind distinguishes big circles from little circles, classifying them as separate groups. Colour and shape have the same effect <i>(see example 
+<p1>
+<span>4</span>
+  <img src="Images/Example_04.jpg"/>
+</p1>
+)</i>, However, if the circles and squares are all the same size and colour, the mind will classify them according to shape <i>(see example 
+<p1>
+<span>5</span>
+  <img src="Images/Example_05.jpg"/>
+</p1>
+)</i>, 
+  Moving typography in virtual reality attracts the viewer to follow. The principle of continuity dictates that once the eye begins to follow something, it will continue to travel in that direction until it encounters another object <i>(see example 
+<p1>
+<span>6</span>
+  <img src="Images/Example_06.jpg"/>
+</p1>
+)</i>. The image indicates that a viewer should follow the line to the end to see where it is going. A “path” is drawn that guides the viewer. Symbols that are similar to arrows, such as a hand with a pointing finger that is used frequently in design to create continuity. Other ways to lead and navigate the eye is to include a photograph or illustration of a “what to do” image. The use of arrow symbols like in the interface of the movie “Minority Report” <i>(see videolink / image  
+<p1>
+<span>17</span>
+  <img src="Images/MIS_Ch05-014.jpg"/>
+</p1>
+)</i>,
+shows how to swipe content in multiple layers. Immediately
+it becomes clear what to do. Typography supports the navigation.
+A designer can also literally or figuratively create a path through the environment. An image of a road, a path, a fence, a row of flowers or a tunnel can all guide the eye across a virtual environment. For readers from Western cultures, the natural urge is to lead the viewer’s eye from left to right. Within virtual reality, 
+navigation as well as continuity gives the designer significant control over the viewer. Out of curiosity, the mind cannot help but to follow the path. 
+  “Closure” is related to continuity in that it asks the eye to complete a path <i>(see example 
+<p1>
+<span>7</span>
+  <img src="Images/Example_07.jpg"/>
+</p1>
+)</i>. As displayed in the image, almost all essential typographic information is missing. However, as long as enough essential information is present, the active mind fills in the blanks. Limited information can still be recognizable. For example, a letter that has pieces taken away slowly is still recognizable as a letter even when down to a bare minimum of pieces. Complex information, as in multiple letter shapes, is trickier for the mind to complete, especially within a virtual environment. It becomes noise with so many connections that a grouped shape can no longer be constructed. The designer must find a balance between the relationship of typography and the surrounding space. “Iron Man” interfaces as an example “overstimulate”, only he can control the typographic layers by gestures which leaves the viewer of the film feel unfamiliar but curious to the links of content 
+<i>(see video link / image 
+<p1>
+<span>16</span>
+  <img src="Images/iron_man_2_holographics.jpg"/>
+</p1>
+)</i>.
+  “Figure” is also referred to as positive and negative
+space, the positive being the object and the negative referring to the space around it. When letter forms are combined, new counter forms emerge between them. The background now becomes the form, as the letter’s original form submerges <i>(see example 
+<p1>
+<span>8</span>
+  <img src="Images/Example_08.jpg"/>
+</p1>
+)</i>. Submerging forms in a three-dimensional environment are almost inevitable. Negative space gives the illusion of depth and order. A three-dimensional representation of typography depends on the interactivity of the viewer if the letters are layered in a 3D environment. Various depths and orders become a fundamental principle. Applying the gestalt theory in the foreground and background of virtual reality become a parallax. The examples trigger cognitive experiences by getting grip on speed and motion, drawing attention to the user. Applying the Gestallt theory to virtual reality shows how typography challenges the virtual layer to be part of it. The theory shows how endless appearances of typographic connections could occur, providing adaptive methods to take in consideration, deconstructing typography instead of displaying a fixed shape.
+</p>
+
+</div>
+<br><br><hr>
+
+<!-------------------------- Chapter 6 ------------------------>
+
+<div class="Chapter6">
+	<A NAME="— Chapter 6">
+        <h3><i>Chapter 6</h3></i>
+        <p><b>— Recap & discussion —</b><br>
+		
+		The implementation of virtual reality within the contemporary design practice stands 
+        at the beginning of a futuristic era. Virtual reality attempts to integrate into our current 
+        society; sold to the masses through the use of rapid “VR experiences”. Our current state of design and typographic representation is challenged to switch from a 2D to a 3D perspective. 
+        Designers could activate society and social behaviour by connecting people to spatial information. Virtual reality provides a glimpse of a futuristic perspective, with typography as its binding element. Typography is evolving over time. Graphic designers are aware of the necessity to focus on the readability of information. Typefaces will have to adapt quickly in order to keep up the pace with new technologies. 
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No one really knows what the future holds for virtual reality and how typography will change in its behaviour. What we do know is that graphic designers should re-examine their current knowledge to the virtual field. They should integrate virtual reality into their work more so that they become familiar with the visual problems and possibilities virtual reality poses to the graphic designer. The problems of typographic interpolation that exist in virtual reality have to become a point of focus. Established optical rules have to be reformed. Letter shapes and the position of the viewer need to interact to ensure readability of fonts. The limitations of 3D typography are actually the limitations of our own brain to make sense of depth. In order to get past this, it is necessary to use certain tools that enhance the human ability to perceive. Current extensions as phones and screens could be replaced with glasses or lenses to see the virtual layer. One’s ability to digest information in a virtual world depends on one’s ability to accept a parallax. Different distances and motion challenge the user to embrace a layered view. The readability of fonts is dependent on predefined rules. Typography has to make use of a parallax; the position, perspective of the viewer and interactivity determines how the the letters are perceived. Alteration and movement in typography becomes inevitable. The third dimension demands of designers to approach the “canvas” differently. By designing in virtual reality, new hierarchies can be introduced and value can be added to the typographic experience through the use of interactive representations of typography. By interacting with typography in a three-dimensional way, passive reading can be turned into an active reading experience. 
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Visual representations of information could change in the three-dimensional world; integration of current typographic appearances into virtual reality could be the first step. Although skeuomorphism <i>(a visual representation of the previous medium)</i> is not yet the answer, this slow transition to a more workable integration of typography into virtual reality is necessary for the public to get used to the radically new narratives that are made possible by virtual reality. With their current knowledge of design, designers must test how typography could behave. By establishing significance in navigation both information and decoration could become a blend of powerful tools. The third dimension becomes meaningless and hollow if it is not able to actually add value to our life in some way.
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The reinvention of the environment solely as a source of entertainment could become a pitfall in post-modern society. “Visual pollution” could occur. Through hyper reality and gamification, we could become over-simulated and over-stimulated. Mixing the virtual layer with physical reality could create a visual dump that blurs our vision. The designer has to keep in mind that a distinction between virtual reality and physical reality should be made. The possible “disconnection” that could ensue between the user and reality could become dangerous; the designer should not stimulate an actual separation from reality. Virtual typography plays with our consciousness. Our senses should be encouraged to offer resistance. Without resistance, we separate our mind from our body and could become lost in a never-ending flow of information. We have to adapt technically as well as mentally.
+          The gestalt theory could possibly be used to approach typography within virtual reality in a practical way. Cognitive behaviour has to be stimulated. The gestalt theory offers a unified whole rather than an accumulation of separate and incoherent objects. The viewer is not in despair but creates unity and order to understand the environment. A layered viewpoint could provide an extra value in processing virtual information. The parallax of typography becomes a key factor in design that involves virtual reality. The future relevance of typography in virtual reality is bound to the ability of designers to use the parallax as a means to successfully integrate current typography into a third dimension.
+                     
+                    </p>
+
+</div>
+<br><br><hr>
+
+<!-------------------------- Conclusion ------------------------>
+
+<div class="Conclusion">
+	<A NAME="— Conclusion">
+        <h3><i>Conclusion</h3></i>
+        <p>
+
+An evolution of typography is dependent on the interactivity and usability of the virtual layer by the user. As long as the public is ready to adapt and change known habits, it will be ready for typography in virtual reality. Designers must look forward as new technologies emerge. Even though the borders of the graphic design profession blur, the standards, certainties and limitations provide security. If the graphic designer holds on to traditional typographic rules, the profession is threatened to settle into a comfortable but confusing stagnated state and will suffer a disconnection from new media. The graphic designer has to integrate virtual reality into the current field. Combining virtual reality with other design disciplines  pushes the boundaries of graphic design even more. Changing typographic rules, such as adapting its appearance by grouping, can create new possibilities for the use of typography in a virtual environment. The role of typography is changed by virtual reality, the parallaxes that occur through the use of multiple layers in a virtual environment requires an alteration in speed and movement of layers. The way in which the layered three-dimensional view presents type is different from the way in which it is presented in a two-dimensional world. In a three dimensional word, we can literally place ourselves in the content. Applying typography in virtual reality does not necessarily change the appearance of typography itself. The role of typography is based on three-dimensional visibility and the motion of virtual layers. By applying proximity, similarity, continuity, closure and figure the designer could reinvent traditional ways to interpret typographic design in a three-dimensional atmosphere. The pitfall of virtual reality is that it could create a shallow commercial dump of layers that blurs the vision of the user. 
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A parallax, the motion of and distance between different layers of information, provides an active environment of navigation in virtual reality. By inviting the user to easily expose layers instead of accepting surface assumptions, curiosity is stimulated and an active and in-depth deconstruction of information is created. The usage of a parallax in virtual reality is the opposition between a presumably passive reading of a text and an active reading. The imagination of the user actively participates in the creation of an information landscape. Virtual reality encourages typography to act not only as a representation of words and letters, but also as a gateway to expose hidden worlds of information. Different groups of virtual information could blend through a change of the appearance of typography. Typefaces could transform into other typefaces whereby faster connections could be made in layered information. The use of a parallax to display information in layers could create clear connections in a three-dimensional space. 
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The tools to design in virtual reality are already being developed. If the designer loses his interest in technological development within the design field, the designer himself becomes irrelevant. The task of the graphic designer remains the same; to connect people with information and solve visual problems through research. I would argue that, by looking at the development of virtual reality, the designer has to adapt to emerging virtual environments. He can do this by entering into a virtual work-space where he can learn about the various possibilities and limitations of virtual reality. 
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The designer today lives in an in-between state caught between reality and virtual reality. By truly engaging with the medium, the designer could enrich reality with a virtual reality layer. Both layers move at a different speeds but are bound by design. A parallax of technological advancement and reality. Implementing typography in the virtual layer using the current knowledge of design as starting point requires the ability of the designer to think ahead of his time. Virtual reality already attempts to integrate into reality, but there is still a long way to go before virtual reality is fully embraced by larger audiences. I think that these are exciting times for graphic designers as we could reshape our profession into one that operates in a three-dimensional and multi-layered context. Are we ready?
+</p>
+
+</div>
+<br><hr>
+
+<!-------------------------- Acknowledgments ------------------------>
+
+<div class="Acknowledgments">
+	<A NAME="— Acknowledgments">
+        <br><center><p>
+
+		<b>— Acknowledgments —</b><br><br>
+		I would like to mention some amazing people for their great morale, support, boldness and encouragements that gave me confidence.<br><br>
+
+		<b>Thesis supervision:</b><br>
+		<i>Dirk Vis</i><br>
+		<i>Marjan Brandsma</i><br><br>
+
+		<b>Philosophical supervision:</b><br>
+		<i>Maarten Cornel</i><br><br>
+
+		<b>Technical supervision:</b><br>
+		<i>Eric Schrijver</i><br><br>
+		  
+		<b>Special thanks to my family:</b><br>
+		<i>Han Blom</i><br>
+		<i>Ingrid Blom</i><br><br>
+
+		<b>And my cornerstones of the KABK life daily life madness:</b><br>
+		<i>Pascal Schilp</i><br>
+		<i>Thijmen van Brunschot</i><br><br>
+		</p>
+	</center>
+	</div>
+
+
+
+
+
+	</div>
+
+
+</body>
+</html>
