@@ -66,6 +66,11 @@
 		      height: auto;
 		    }
 
+		    .Conclusion{
+		    	background-color: none;
+
+		    }
+
 		    /*------------------------------------------Span------------------------------------------*/
 
 			  img{
@@ -174,6 +179,18 @@
 					    -webkit-text-fill-color: transparent;
 					  }
 
+					  h4 {
+					    /*source-list*/
+					    font-size: 19px;
+					    font-family: Chronicle;
+					    /*line-height: 14px;*/
+					    font-weight: normal;
+					    color:black;
+					    background: -webkit-radial-gradient(white, blue, white, blue, white, blue, white, blue);
+					    -webkit-background-clip: text;
+					    -webkit-text-fill-color: transparent;
+					  }
+
 					    p {
 					    /*Plain text*/
 					    font-size: 19px;
@@ -207,19 +224,95 @@
 						}
 
 					  	hr{
+					  		page-break-before: always;
 					  	}
 
 					  	.container {
-					    position: relative;
+					    position: fixed;
+					    height: 10px;
+					    z-index:999;
 						}
 
-						.topright {
-					    position: absolute;
-					    z-index: 1;
-					    top: 15px;
-					    right: 16px;
-					    font-size: 18px;
-					}
+							.topright {
+						    position: fixed;
+						    z-index: 1;
+						    top: 15px;
+						    right: 16px;
+						    font-size: 18px;
+							}
+
+							.bottomRight {
+						    position: absolute;
+						    z-index: 3;
+						    top: 80%;
+						    right: 16px;
+						    font-size: 18px;
+							}
+
+
+
+			ul {
+			    list-style-type: none;
+			    margin: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    background-color: none;
+
+			}
+
+			li {
+			    float: left;
+			}
+
+			li a, .dropbtn {
+			    display: inline-block;
+			    color: white;
+			    text-align: center;
+			    padding: 2px 20px;
+			    text-decoration: none;
+			}
+
+			li a:hover, .Chapters:hover .dropbtn {
+			    background-color: red;
+			}
+
+			li.Chapters {
+			    display: inline-block;
+			}
+
+			.Chapters-content {
+			    display: none;
+			    position: absolute;
+			    min-width: 160px;
+			    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			    z-index: 1;
+			    background: black;
+
+			}
+
+			.Chapters-content a {
+			    color: black;
+			    padding: 12px 16px;
+			    text-decoration: none;
+			    display: block;
+			    text-align: left;
+
+			}
+
+			.Chapters-content a:hover {
+				background: black; /* For browsers that do not support gradients */
+			  background: -webkit-radial-gradient(left,rgba(255,0,0,0),rgba(255,0,0,1)); /*Safari 5.1-6*/
+			  background: -o-radial-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Opera 11.1-12*/
+			  background: -moz-radial-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Fx 3.6-15*/
+			  background: radial-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /*Standard*/
+
+			}
+
+			.Chapters:hover .Chapters-content {
+			    display: block;
+			}
+
+
 
 					a:link {
 					    text-decoration: none;
@@ -241,6 +334,31 @@
 			/*.......................................................*/
 			/*.......................................................*/
 			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
+			/*.......................................................*/
 
 
 			/*			Dit is de css voor het print gedeelte*/
@@ -257,12 +375,31 @@
 					display:block;
 				}
 
+				img {
+			    max-width: 100% !important;
+			    display: block;
+				}
+
 			body {
 			  margin: 0;
 			  padding: 0;
 			  border: none;
 			  background-size: cover;
 			 }
+
+			.Chapters{
+				position: absolute;
+		      top: 100%;
+		      padding-left: 30%;
+		      padding-right: 10%;
+		      padding-top: 5%;
+		      padding-bottom: 5%;
+		      height: auto;
+		      background: white;
+		      text-align: justify;
+   			  text-justify: inter-word;
+
+			}
 
 			.start {
 		      position: relative;
@@ -283,8 +420,8 @@
 		    .content {
 		      position: absolute;
 		      top: 100%;
-		      padding-left: 20%;
-		      padding-right: 20%;
+		      padding-left: 30%;
+		      padding-right: 10%;
 		      padding-top: 5%;
 		      padding-bottom: 5%;
 		      height: auto;
@@ -389,20 +526,48 @@
 					    transform: skew(63deg,-26.6deg);
 					  	}
 
-					  	h3 {
+					  	h2 {
 					    /*subquestion*/
 					    font-size: 25px;
 					    font-family: Chronicle;
 					    letter-spacing: 1.3px;
+					    background: -webkit-radial-gradient(black, black, black, grey, grey);
+					    -webkit-background-clip: text;
+					    -webkit-text-fill-color: transparent;
 					  	}
+
+					  	h3 {
+					    /*Chapter title*/
+					    font-size: 50px;
+					    font-family: Chronicle;
+					    font-weight: normal;
+					    color:black;
+					    background: -webkit-radial-gradient(black, black, black, grey, grey);
+					    -webkit-background-clip: text;
+					    -webkit-text-fill-color: transparent;
+					  }
+
+					  h4 {
+					    /*Chapter title*/
+					    font-size: 25px;
+					    font-family: Chronicle;
+					    letter-spacing: 1.3px;
+					    background: -webkit-radial-gradient(white, white, white, grey, grey);
+					    -webkit-background-clip: text;
+					    -webkit-text-fill-color: transparent;
+					  }
 
 					    p {
 					    /*Plain text*/
 					    font-size: 19px;
 					    font-family: Chronicle, times;
+					    background: -webkit-radial-gradient(black, black, black, grey, grey);
+					    -webkit-background-clip: text;
+					    -webkit-text-fill-color: transparent;
+
 						}
 
-					  	p1 {
+					  	.p1 {
 					    /*Plain text*/
 					    font-size: 19px;
 					    font-family: Chronicle, times;
@@ -429,6 +594,8 @@
 
 						
 
+						
+
 			/*.......................................................*/
 			/*.......................................................*/
 			/*.......................................................*/
@@ -447,27 +614,27 @@
 
 			<!--.......................................................-->
 
-
-
 <div class="container">
-  <div class="topright">
-    <p2>
-      <a href="#— Introduction"><p2><i>— Chapter 1</p2><br></i></a>
-    <a href="#— Chapter 1"><p2><i>— Chapter 1</p2><br></i></a>
-    <a href="#— Chapter 2"><p2><i>— Chapter 2<br></p2></i></a>
-    <a href="#— Chapter 3"><p2><i>— Chapter 3<br></p2></i></a>
-    <a href="#— Chapter 4"><p2><i>— Chapter 4<br></p2></i></a>
-    <a href="#— Chapter 5"><p2><i>— Chapter 5<br></p2></i></a>
-    <a href="#— Chapter 6"><p2><i>— Chapter 6<br></p2></i></a>
-    <a href="#— Conclusion"><p2><i>— Conclusion<br></p2></i></a>
-    <a href="#— Acknowledgments"><p2><i>— Acknowledgements<br></p2></i></a>
-
-</p2>
-
+	<ul>
+	  <li class="Chapters">
+	    <a href="javascript:void(0)" class="dropbtn"><h4>— Chapters</h4></a>
+	    <div class="Chapters-content">
+	      <h4>
+	      <a href="#— Introduction"><i>Introduction<br></i></a>
+	    <a href="#— Chapter 1"><i>Chapter 1<br></i></a>
+	    <a href="#— Chapter 2"><i>Chapter 2<br></i></a>
+	    <a href="#— Chapter 3"><i>Chapter 3<br></i></a>
+	    <a href="#— Chapter 4"><i>Chapter 4<br></i></a>
+	    <a href="#— Chapter 5"><i>Chapter 5<br></i></a>
+	    <a href="#— Chapter 6"><i>Chapter 6<br></i></a>
+	    <a href="#— Conclusion"><i>Conclusion<br></i></a>
+	    <a href="#— Acknowledgments"><i>Acknowledgements<br></i></a>
+		</h4>
+	  </li>
+	</ul>
 </div>
-</div>
 
-
+<!-------------------------- Question Title ------------------------>
 
 <div class='start'>
 	<div class="title">
@@ -479,9 +646,8 @@
 <div class='content'>
 
 <!-------------------------- Introduction ------------------------>
-
+	<a name="— Introduction">
 	<div class="introduction">
-        <A NAME="— Introduction">
        <p><b>— Introduction —</b><br>
         
 <i>Graphic design</i> is the practice of connecting people with information, solving visual problems through academic and visual research by critical thought. A designer may employ myriad skills and techniques, while incorporating a collected body of knowledge both design and life related. A designer should not separate the two, they are inseparable. The 20th century definition of a graphic designer no longer applies. A graphic designer today can no longer hide behind the mask of traditional design. He has to adapt his profession, skills and mentality to the potential needs of society within a larger context. A graphic designer is someone who needs to think strategically, critically and beyond established habits. Providing an interdisciplinary perspective influences the design practice. The graphic designer is an agent of change in a rapidly developing practice.
@@ -510,15 +676,17 @@ change typography?”</i></h2>
 	<br><br>
 	<b><i>&mdash;In the sixth chapter</i></b> I provide the reader with a recap of the thesis and will briefly discuss topics that are beyond the scope of this research but are worth further discussion and research. 
 	<br><br>
-	<b><i>&mdash;Finally, I conclude</i></b> with my answer to the question and explain how designers could manage typography in virtual reality.</p>
+	<b><i>&mdash;Finally, I conclude</i></b> with my answer to the question and explain how designers could manage typography in virtual reality.
+<a name="— Chapter 1">
+</p>
 </div>
-<br><br><br>
-<hr>
+
+<br><br><hr>
+
 
 <!-------------------------- Chapter 1 ------------------------>
 
 <div class="Chapter1">
-	<A NAME="— Chapter 1">
         <h3><i>Chapter 1</h3></i>
 	       	<p><b>— Virtual reality? —</b><br>
          
@@ -543,15 +711,15 @@ Within a three-dimensional world, the displacement or difference in the apparent
 </p1>
 )</i>.
          To explain: typography can be viewed along different lines of sight in a three-dimensional world. This contradicts our current two-dimensional viewpoint. We see the letters only from the front. The position of typography within a three-dimensional world can be measured by the angle or semi-angle of inclination between two lines. Due to foreshortening, nearby “objects” have a larger impact than more distant objects when observed from different positions. For example, when one drives a car, the foreground of the environment appears to move faster than the background. The dynamics of a parallax can be used to determine distances between objects or layers. Migrating current typography to virtual spaces is problematic since, when doing this, the legibility in the third dimension becomes complex. The viewers are used to a two-dimensional viewpoint. Words far away or behind the user in a space cannot be read and words too close cannot be seen as information, they become a shape. Information could become a clutter of layers or even invisible when viewed from different angles. By navigating through a three-dimensional landscape, fixed letters could for example rotate 90 degrees so that they become invisible, or 180 degrees so that they become unreadable. The three-dimensional impact of virtual reality on typography has to be investigated.</p>
-         <br><br>
-
+         
+<a name="— Chapter 2">
 </div>
-<hr>
+
+<br><br><hr>
 
 <!-------------------------- Chapter 2 ------------------------>
 
 <div class="Chapter2">
-	<A NAME="— Chapter 2">
         <h3><i>Chapter 2</h3></i>
         
 	    <p><b>— Typography —</b><br>
@@ -622,14 +790,16 @@ Within a three-dimensional world, the displacement or difference in the apparent
         <span>10</span>
           <img src="Images/parallax-scrolling-effect.jpg"/>
         </p1>)</i>.</p>
-
+<a name="— Chapter 3">
 </div>
-<br><br><hr>
+
+<br><br>
+<hr>
 
 <!-------------------------- Chapter 3 ------------------------>
 
 <div class="Chapter3">
-	<A NAME="— Chapter 3">
+	
         <h3><i>Chapter 3</h3></i>
         <p><b>— Narrative systems —</b><br>
 
@@ -706,14 +876,15 @@ When it comes to content, form and vocabularies, the semiotics <i>(the study of 
 )</i>. At this very moment, it seems like we are in a decorative period of applying typography in a three-dimensional atmosphere. With virtual reality software at hand, expressing ourselves has become easier than ever. Focusing on typographic implementation within a three-dimensional environment could lead to narratives that go beyond the imagination in our time. The designer has to keep in mind that each person understands and perceives a built environment differently. The difference in understanding three-dimensional content has to do with personal interpretation of text and images. The task is to communicate information the way it should be perceived. A designer has to take the lead and steer the viewer in the right direction in order to receive information in the clearest/most proper way. Simplifying information does not happen solely through the use of the technology of virtual reality itself; it is about using a parallax, a layered view to understand information in a simple and understandable way. By accessing typographic layers with gestures that people are familiar with today, such as scrolling or swiping through a webpage, designers can test and expand the virtual reality boundaries. The layers should be intuitive so people can instinctively use it the right way as a first step. 
 </p>
 
+<a name="— Chapter 4">
 
 </div>
+
 <br><br><hr>
 
 <!-------------------------- Chapter 4 ------------------------>
 
 <div class="Chapter4">
-	<A NAME="— Chapter 4">
         <h3><i>Chapter 4</h3></i>
         <p><b>— Hyper reality and philosophical considerations —</b><br>
 
@@ -745,13 +916,14 @@ When it comes to content, form and vocabularies, the semiotics <i>(the study of 
 	          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A film is a kind of virtual reality too, except for the fact that you do not walk through it, you are guided through it. Like virtual reality, film could appear and disappear in total transparency. What is interesting is that virtual reality allows you to create your own digital habitat. If you lose your body, you have still got your eyes. But what happens if you are really involved? If you can really keep a distance while taking people in? To engage physically might be dangerous. To witness a murder is a terrifying experience, even though it is your mind in there, not your body. Still, it is the mind that more or less represents the soul. Your mind is your ego; you bring it along. One of the traps of the virtual world is that we can no longer distinguish virtual from physical reality. Some people have enough problems in this reality, so that when confronted with another reality they might not be able to distinguish between the two anymore. The consciousness of people will change. It is time to adapt, technically as well as mentally. Typography is already integrated into “physical” objects used as a medium to communicate. A book, screen or a print could be seen as physical object where typography is the gateway to information. The world could be seen as a canvas, open to a virtual communicative layer.
 	        </p>
 
+<a name="— Chapter 5">
 </div>
+
 <br><br><hr>
 
 <!-------------------------- Chapter 5 ------------------------>
 
 <div class="Chapter5">
-	<A NAME="— Chapter 5">
         <h3><i>Chapter 5</h3></i>
         <p><b>— The unified whole, a potential solution —</b><br>
 
@@ -847,13 +1019,14 @@ space, the positive being the object and the negative referring to the space aro
 )</i>. Submerging forms in a three-dimensional environment are almost inevitable. Negative space gives the illusion of depth and order. A three-dimensional representation of typography depends on the interactivity of the viewer if the letters are layered in a 3D environment. Various depths and orders become a fundamental principle. Applying the gestalt theory in the foreground and background of virtual reality become a parallax. The examples trigger cognitive experiences by getting grip on speed and motion, drawing attention to the user. Applying the Gestallt theory to virtual reality shows how typography challenges the virtual layer to be part of it. The theory shows how endless appearances of typographic connections could occur, providing adaptive methods to take in consideration, deconstructing typography instead of displaying a fixed shape.
 </p>
 
+<a name="— Chapter 6">
 </div>
+
 <br><br><hr>
 
 <!-------------------------- Chapter 6 ------------------------>
 
 <div class="Chapter6">
-	<A NAME="— Chapter 6">
         <h3><i>Chapter 6</h3></i>
         <p><b>— Recap & discussion —</b><br>
 		
@@ -868,13 +1041,14 @@ space, the positive being the object and the negative referring to the space aro
                      
                     </p>
 
+<a name="— Conclusion">
 </div>
+
 <br><br><hr>
 
 <!-------------------------- Conclusion ------------------------>
 
 <div class="Conclusion">
-	<A NAME="— Conclusion">
         <h3><i>Conclusion</h3></i>
         <p>
 
@@ -882,15 +1056,18 @@ An evolution of typography is dependent on the interactivity and usability of th
   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A parallax, the motion of and distance between different layers of information, provides an active environment of navigation in virtual reality. By inviting the user to easily expose layers instead of accepting surface assumptions, curiosity is stimulated and an active and in-depth deconstruction of information is created. The usage of a parallax in virtual reality is the opposition between a presumably passive reading of a text and an active reading. The imagination of the user actively participates in the creation of an information landscape. Virtual reality encourages typography to act not only as a representation of words and letters, but also as a gateway to expose hidden worlds of information. Different groups of virtual information could blend through a change of the appearance of typography. Typefaces could transform into other typefaces whereby faster connections could be made in layered information. The use of a parallax to display information in layers could create clear connections in a three-dimensional space. 
   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The tools to design in virtual reality are already being developed. If the designer loses his interest in technological development within the design field, the designer himself becomes irrelevant. The task of the graphic designer remains the same; to connect people with information and solve visual problems through research. I would argue that, by looking at the development of virtual reality, the designer has to adapt to emerging virtual environments. He can do this by entering into a virtual work-space where he can learn about the various possibilities and limitations of virtual reality. 
   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The designer today lives in an in-between state caught between reality and virtual reality. By truly engaging with the medium, the designer could enrich reality with a virtual reality layer. Both layers move at a different speeds but are bound by design. A parallax of technological advancement and reality. Implementing typography in the virtual layer using the current knowledge of design as starting point requires the ability of the designer to think ahead of his time. Virtual reality already attempts to integrate into reality, but there is still a long way to go before virtual reality is fully embraced by larger audiences. I think that these are exciting times for graphic designers as we could reshape our profession into one that operates in a three-dimensional and multi-layered context. Are we ready?
+  <br><br>
+  — "Follow the white rabbit" —<br>
+  <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;— Remco Blom, Thesis 2017</i>
 </p>
 
+<a name="— Acknowledgments">
 </div>
 <br><hr>
 
 <!-------------------------- Acknowledgments ------------------------>
 
 <div class="Acknowledgments">
-	<A NAME="— Acknowledgments">
         <br><center><p>
 
 		<b>— Acknowledgments —</b><br><br>
@@ -958,20 +1135,62 @@ An evolution of typography is dependent on the interactivity and usability of th
 	<div id="print">
 		<!-- 	In deze div maak je het print gedeelte -->
 
+
 <div class='start'>
 	<div class="title">
 		<h1><i>— How could virtual reality 
                 change typography? —</i></h1>
+                <br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br>
+
+                <center><h4>"Parallax" — Thesis Remco Blom</h4></center>
+<br>
     </div>
+    <a name="— Introduction">
 </div>
+
+<hr>
 
 <div class='content'>
 
 <!-------------------------- Introduction ------------------------>
 
 	<div class="introduction">
-        <A NAME="— Introduction">
-       <p><b>— Introduction —</b><br>
+
+		<h2>
+	Introduction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+	Chapter 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+	Chapter 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+	Chapter 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+	Chapter 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+	Chapter 5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+	Chapter 6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+	Conclusion &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+	</h2>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br>
+
+<h2>— Abstract —</h2>
+
+<p>
+“— How could virtual reality 
+change typography?” 
+
+Typography in virtual reality is on the rise. A three-dimensional interactive representation of typography has a completely different impact on the experience of information. 3D typography could be both an improvement of typography in itself as well as a better way to communicate within virtual reality.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How does 3D typography change the experience of communication? One objective is to analyse differences between the current state of typography and the potential migration to a three-dimensional atmosphere. We can do this by identifying the components necessary for change. Identifying the hidden problems and the capability of typography to adapt could enable the development of three-dimensional usage. The immediate objective of this thesis is to define the role of typography in a virtual environment, so that we might advance the experience of information.
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Typography can be viewed along multiple different lines and layers of sight within a three-dimensional world. This is in contradiction with our current two-dimensional viewpoint. We see letters only in frontal positions. Problems with readability arise when the distance between the reader and the letter changes. Do we therefore have to treat the letter as an image rather than as text? We cannot just place 2D typography in a 3D environment because this negatively influences the readability of the text. A parallax can be used to differentiate between distances of objects and layers and could therefore be the solution to this problem.
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We can use typography as an interactive tool, a binding element to navigate and connect. The migration of typography to a virtual world addresses an alteration in seeing. As digital techniques become more accessible, the virtual world of 3D typography is an area still in demand of critical development, especially within the experience of typography. Legibility and interaction become a focal point in designing spatial information. In order to successfully integrate typographic design into virtual reality, it is essential that we understand the historical background of typography and the contemporary design field. The designer has to link visual concepts to post-modern thinking as well as practical and technical suggestions. Audience, context and a potential shift of media usage are an essential focus throughout this thesis.
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By defining the current state of virtual reality, touching upon social, conceptual and philosophical considerations we can start to set up a discourse for virtual reality in the graphic design practice. These are exciting times for graphic designers as we can reshape our profession in a three-dimensional multi-layered context.
+</p>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	
+
+      <h2><b>— Introduction —</b></h2><p>
         
 <i>Graphic design</i> is the practice of connecting people with information, solving visual problems through academic and visual research by critical thought. A designer may employ myriad skills and techniques, while incorporating a collected body of knowledge both design and life related. A designer should not separate the two, they are inseparable. The 20th century definition of a graphic designer no longer applies. A graphic designer today can no longer hide behind the mask of traditional design. He has to adapt his profession, skills and mentality to the potential needs of society within a larger context. A graphic designer is someone who needs to think strategically, critically and beyond established habits. Providing an interdisciplinary perspective influences the design practice. The graphic designer is an agent of change in a rapidly developing practice.
 <br><br>
@@ -982,6 +1201,8 @@ An evolution of typography is dependent on the interactivity and usability of th
 change typography?”</i></h2> 
 
 <p>In order to be able to answer this question, we first have to understand the question itself. Within the thesis I address the potential migration of typography to a three-dimensional atmosphere while additionally touching upon social, conceptual and philosophical considerations.</p>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<p class="tab">
 	<b><i>&mdash;In the first chapter</i></b> I elaborate on the current state of virtual reality. I discuss the implementation of virtual reality in the design practice. Why and how is this implementation needed? Seeing in different perspectives, a parallax, is clarified. 
@@ -1000,14 +1221,21 @@ change typography?”</i></h2>
 	<b><i>&mdash;In the sixth chapter</i></b> I provide the reader with a recap of the thesis and will briefly discuss topics that are beyond the scope of this research but are worth further discussion and research. 
 	<br><br>
 	<b><i>&mdash;Finally, I conclude</i></b> with my answer to the question and explain how designers could manage typography in virtual reality.</p>
+
+	<a name="— Chapter 1">
 </div>
-<br><br><br>
+
+<br><br>
+
 <hr>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <!-------------------------- Chapter 1 ------------------------>
 
 <div class="Chapter1">
-	<A NAME="— Chapter 1">
         <h3><i>Chapter 1</h3></i>
 	       	<p><b>— Virtual reality? —</b><br>
          
@@ -1037,15 +1265,20 @@ Within a three-dimensional world, the displacement or difference in the apparent
 </p1>
 )</i>.
          To explain: typography can be viewed along different lines of sight in a three-dimensional world. This contradicts our current two-dimensional viewpoint. We see the letters only from the front. The position of typography within a three-dimensional world can be measured by the angle or semi-angle of inclination between two lines. Due to foreshortening, nearby “objects” have a larger impact than more distant objects when observed from different positions. For example, when one drives a car, the foreground of the environment appears to move faster than the background. The dynamics of a parallax can be used to determine distances between objects or layers. Migrating current typography to virtual spaces is problematic since, when doing this, the legibility in the third dimension becomes complex. The viewers are used to a two-dimensional viewpoint. Words far away or behind the user in a space cannot be read and words too close cannot be seen as information, they become a shape. Information could become a clutter of layers or even invisible when viewed from different angles. By navigating through a three-dimensional landscape, fixed letters could for example rotate 90 degrees so that they become invisible, or 180 degrees so that they become unreadable. The three-dimensional impact of virtual reality on typography has to be investigated.</p>
-         <br><br>
 
+         <a name="— Chapter 2">
 </div>
-<hr>
+<br><br><hr>
 
 <!-------------------------- Chapter 2 ------------------------>
 
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br>
+
+
 <div class="Chapter2">
-	<A NAME="— Chapter 2">
         <h3><i>Chapter 2</h3></i>
         
 	    <p><b>— Typography —</b><br>
@@ -1120,10 +1353,15 @@ Within a three-dimensional world, the displacement or difference in the apparent
 </div>
 <br><br><hr>
 
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
 <!-------------------------- Chapter 3 ------------------------>
 
 <div class="Chapter3">
-	<A NAME="— Chapter 3">
+	<a name="— Chapter 3">
         <h3><i>Chapter 3</h3></i>
         <p><b>— Narrative systems —</b><br>
 
@@ -1206,8 +1444,13 @@ When it comes to content, form and vocabularies, the semiotics <i>(the study of 
 
 <!-------------------------- Chapter 4 ------------------------>
 
+<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br>
+	
+
 <div class="Chapter4">
-	<A NAME="— Chapter 4">
+	<a name="— Chapter 4">
         <h3><i>Chapter 4</h3></i>
         <p><b>— Hyper reality and philosophical considerations —</b><br>
 
@@ -1244,8 +1487,15 @@ When it comes to content, form and vocabularies, the semiotics <i>(the study of 
 
 <!-------------------------- Chapter 5 ------------------------>
 
+<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
 <div class="Chapter5">
-	<A NAME="— Chapter 5">
+	<a name="— Chapter 5">
         <h3><i>Chapter 5</h3></i>
         <p><b>— The unified whole, a potential solution —</b><br>
 
@@ -1346,8 +1596,13 @@ space, the positive being the object and the negative referring to the space aro
 
 <!-------------------------- Chapter 6 ------------------------>
 
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br>
+
+
 <div class="Chapter6">
-	<A NAME="— Chapter 6">
+	<a name="— Chapter 6">
         <h3><i>Chapter 6</h3></i>
         <p><b>— Recap & discussion —</b><br>
 		
@@ -1367,25 +1622,41 @@ space, the positive being the object and the negative referring to the space aro
 
 <!-------------------------- Conclusion ------------------------>
 
+<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br>
+
 <div class="Conclusion">
-	<A NAME="— Conclusion">
+	<a name="— Conclusion">
         <h3><i>Conclusion</h3></i>
         <p>
 
 An evolution of typography is dependent on the interactivity and usability of the virtual layer by the user. As long as the public is ready to adapt and change known habits, it will be ready for typography in virtual reality. Designers must look forward as new technologies emerge. Even though the borders of the graphic design profession blur, the standards, certainties and limitations provide security. If the graphic designer holds on to traditional typographic rules, the profession is threatened to settle into a comfortable but confusing stagnated state and will suffer a disconnection from new media. The graphic designer has to integrate virtual reality into the current field. Combining virtual reality with other design disciplines  pushes the boundaries of graphic design even more. Changing typographic rules, such as adapting its appearance by grouping, can create new possibilities for the use of typography in a virtual environment. The role of typography is changed by virtual reality, the parallaxes that occur through the use of multiple layers in a virtual environment requires an alteration in speed and movement of layers. The way in which the layered three-dimensional view presents type is different from the way in which it is presented in a two-dimensional world. In a three dimensional word, we can literally place ourselves in the content. Applying typography in virtual reality does not necessarily change the appearance of typography itself. The role of typography is based on three-dimensional visibility and the motion of virtual layers. By applying proximity, similarity, continuity, closure and figure the designer could reinvent traditional ways to interpret typographic design in a three-dimensional atmosphere. The pitfall of virtual reality is that it could create a shallow commercial dump of layers that blurs the vision of the user. 
   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A parallax, the motion of and distance between different layers of information, provides an active environment of navigation in virtual reality. By inviting the user to easily expose layers instead of accepting surface assumptions, curiosity is stimulated and an active and in-depth deconstruction of information is created. The usage of a parallax in virtual reality is the opposition between a presumably passive reading of a text and an active reading. The imagination of the user actively participates in the creation of an information landscape. Virtual reality encourages typography to act not only as a representation of words and letters, but also as a gateway to expose hidden worlds of information. Different groups of virtual information could blend through a change of the appearance of typography. Typefaces could transform into other typefaces whereby faster connections could be made in layered information. The use of a parallax to display information in layers could create clear connections in a three-dimensional space. 
   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The tools to design in virtual reality are already being developed. If the designer loses his interest in technological development within the design field, the designer himself becomes irrelevant. The task of the graphic designer remains the same; to connect people with information and solve visual problems through research. I would argue that, by looking at the development of virtual reality, the designer has to adapt to emerging virtual environments. He can do this by entering into a virtual work-space where he can learn about the various possibilities and limitations of virtual reality. 
-  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The designer today lives in an in-between state caught between reality and virtual reality. By truly engaging with the medium, the designer could enrich reality with a virtual reality layer. Both layers move at a different speeds but are bound by design. A parallax of technological advancement and reality. Implementing typography in the virtual layer using the current knowledge of design as starting point requires the ability of the designer to think ahead of his time. Virtual reality already attempts to integrate into reality, but there is still a long way to go before virtual reality is fully embraced by larger audiences. I think that these are exciting times for graphic designers as we could reshape our profession into one that operates in a three-dimensional and multi-layered context. Are we ready?
+  The designer today lives in an in-between state caught between reality and virtual reality. By truly engaging with the medium, the designer could enrich reality with a virtual reality layer. Both layers move at a different speeds but are bound by design. A parallax of technological advancement and reality. Implementing typography in the virtual layer using the current knowledge of design as starting point requires the ability of the designer to think ahead of his time. Virtual reality already attempts to integrate into reality, but there is still a long way to go before virtual reality is fully embraced by larger audiences. I think that these are exciting times for graphic designers as we could reshape our profession into one that operates in a three-dimensional and multi-layered context. Are we ready?
+  <br><br>
+  — "Follow the white rabbit" —<br>
+  <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;— Remco Blom, Thesis 2017</i>
 </p>
 
 </div>
 <br><hr>
 
+<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br>
+
 <!-------------------------- Acknowledgments ------------------------>
 
 <div class="Acknowledgments">
-	<A NAME="— Acknowledgments">
-        <br><center><p>
+	<a name="— Acknowledgments">
+        <br><p>
 
 		<b>— Acknowledgments —</b><br><br>
 		I would like to mention some amazing people for their great morale, support, boldness and encouragements that gave me confidence.<br><br>
@@ -1407,8 +1678,7 @@ An evolution of typography is dependent on the interactivity and usability of th
 		<b>And my cornerstones of the KABK life daily life madness:</b><br>
 		<i>Pascal Schilp</i><br>
 		<i>Thijmen van Brunschot</i><br><br>
-		</p>
-	</center>
+		</p>	
 	</div>
 
 
